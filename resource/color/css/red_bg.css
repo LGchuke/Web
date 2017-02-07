@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif, Georgia, "Times New Roman", Times, serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #555555;
+    background: url(/Users/Egoist/Documents/Egoist/Pictures/red_bg.png);
+    overflow-x: hidden;
+}
+.color-block {
+  width: 100%;
+  height: 28px;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  /*margin-bottom: 0.1px;*/
+}
+#red0001 { background: #000000; }
+#red0002 { background: #080000; }
+#red0003 { background: #100000; }
+#red0004 { background: #180000; }
+#red0005 { background: #200000; }
+#red0006 { background: #280000; }
+#red0007 { background: #300000; }
+#red0008 { background: #380000; }
+#red0009 { background: #400000; }
+#red0010 { background: #480000; }
+#red0011 { background: #500000; }
+#red0012 { background: #580000; }
+#red0013 { background: #600000; }
+#red0014 { background: #680000; }
+#red0015 { background: #700000; }
+#red0016 { background: #780000; }
+#red0032 { background: #800000; }
+#red0017 { background: #880000; }
+#red0018 { background: #900000; }
+#red0019 { background: #980000; }
+#red0020 { background: #A00000; }
+#red0021 { background: #A80000; }
+#red0022 { background: #B00000; }
+#red0023 { background: #B80000; }
+#red0024 { background: #C00000; }
+#red0025 { background: #C80000; }
+#red0026 { background: #D00000; }
+#red0027 { background: #D80000; }
+#red0028 { background: #E00000; }
+#red0029 { background: #E80000; }
+#red0030 { background: #F00000; }
+#red0031 { background: #F80000; }

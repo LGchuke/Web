@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title></title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #555555;
+    background-color: #eeeeee;
+    overflow-x: hidden;
+    /*margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background: url(/Users/Egoist/Documents/Egoist/Pictures/03035_amazingmirrorsunset_2880x1800.jpg);*/
+  }
+  #wrapper {
+    margin: 0 auto;
+    /*width: 1140px;*/
+    /*height: 1000px;*/
+    /*height: auto;*/
+    background: url(/Users/Egoist/Documents/Egoist/Pictures/IMG_1477.jpg);
+    background-color: #008a73;
+    /*background: #f66;*/
+    z-index: 100;
+  }
+  #main {
+    padding: 10px;
+    width: 1120px;
+    height: 1000px;
+  }
+
+  #burst-12 {
+      background: #ffd700;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 300px;
+      top: 200px;
+      text-align: center;
+      box-shadow: 0 0px 60px 1px #ffff00;
+      animation: _rotate_breathe 6s ease-in-out infinite, move 3s;
+      border-radius: 6px;
+  }
+  #burst-12:before, #burst-12:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 80px;
+      width: 80px;
+      background: #ffd700;
+      border-radius: 6px;
+  }
+  #burst-12:before {
+      transform: rotate(30deg);
+      box-shadow: 0 0px 40px 1px #ffd700;
+  }
+  #burst-12:after {
+     transform: rotate(60deg);
+     box
+     -shadow: 0 0px 20px 1px #ffd700;
+  }
+  @keyframes _rotate {
+    from {
+      transform: rotate(0deg)
+    } to {
+      transform: rotate(360deg)
+    }
+  }
+  @keyframes _rotate_breathe {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: 0 0px 60px 1px #fff;
+    }
+    50% {
+      transform: rotate(360deg);
+      box-shadow: 0 0px 100px 10px #ffff00;
+    }
+    100% {
+      transform: rotate(0deg);
+      box-shadow: 0 0px 60px 1px #fff;
+    }
+  }
+  @keyframes move {
+    from { top: 0; left: 0; opacity: 1;}
+    to   { top: 200px; left: 300px; opacity: 1;}
+  }
+
+  #pacman, #pacman_up, #pacman_down {
+    position: absolute;
+    top: 300px;
+    left: 210px;
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid black;
+    border-left: 60px solid black;
+    border-bottom: 60px solid black;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  #pacman_up {
+    animation: _up 0.8s linear infinite;
+  }
+  @keyframes _up {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(50deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  #pacman_down {
+    animation: _down 0.8s linear infinite;
+  }
+  @keyframes _down {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-50deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .food {
+    position: absolute;
+    bottom: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #000;
+  }
+  #food_00 {
+    left: 300px;
+  }
+  #food_01 {
+    left: 380px;
+  }
+  #food_02 {
+    left: 460px;
+  }
+  #food_03 {
+    left: 540px;
+  }
+  #food_04 {
+    left: 620px;
+  }
+  #food_group {
+    position: absolute;
+    width: 1000px;
+    height: 20px;
+    left: 30px;
+    top: 350px;
+    animation: _move_g 0.8s linear infinite;
+  }
+  #box {
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    left: 600px;
+    top: 344px;
+    background: #000;
+  }
+  @keyframes _move_g {
+    from {
+      left: 0px;
+    } to {
+      left: -80px;
+    }
+  }
+</style>
+<body>
+  <!-- <div class="aside"></div> -->
+  <div id="wrapper">
+    <div id="main">
+      <!-- <div style="width:150px">
+        <div id="test-linear-graient"></div>
+      </div> -->
+      <!-- <div id="tri2"></div>
+      <div id="tri"></div>
+      <div id="round"></div>
+
+      <div class="arrow-up"></div>
+      <div class="arrow-down"></div>
+      <div class="arrow-left"></div>
+      <div class="arrow-right"></div>
+
+      <div id="yin-yang"></div>
+      <div id="yin-yang2"></div>
+      <div id="burst-12"></div> -->
+      <!-- <div id="pacman"></div> -->
+      <div id="pacman_up"></div>
+      <div id="pacman_down"></div>
+
+      <div id="food_group">
+        <div id="food_00" class="food"></div>
+        <div id="food_01" class="food"></div>
+        <div id="food_02" class="food"></div>
+        <div id="food_03" class="food"></div>
+        <div id="food_04" class="food"></div>
+      </div>
+      <div id="box"></div>
+
+
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title></title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #555555;
+    background-color: #eeeeee;
+    overflow-x: hidden;
+    /*margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background: url(/Users/Egoist/Documents/Egoist/Pictures/03035_amazingmirrorsunset_2880x1800.jpg);*/
+  }
+  #wrapper {
+    margin: 0 auto;
+    /*width: 1140px;*/
+    /*height: 1000px;*/
+    /*height: auto;*/
+    background: url(/Users/Egoist/Documents/Egoist/Pictures/IMG_1477.jpg);
+    background-color: #008a73;
+    /*background: #f66;*/
+    z-index: 100;
+  }
+  #main {
+    padding: 10px;
+    width: 1120px;
+    height: 1000px;
+  }
+  #test-linear-graient {
+    transition: all 0.5s ease;
+    /*width: 30%;
+    height: 16px;*/
+    /*background: #000 linear-gradient(
+      to top left,
+      blue,
+      yellow );*/
+    /*animation: progress 2s linear infinite;*/
+    background: #333 linear-gradient(
+      135deg,
+      rgba(255,255,255,.15) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255,255,255,.15) 50%,
+      rgba(255,255,255,.15) 75%,
+      transparent 75%,transparent
+    );
+    background-size: 40px 40px;
+  }
+  @keyframes progress {
+    from {
+      background-position: 45px 0
+    } to {
+      background-position: 0px 0
+    }
+  }
+
+  #tri {
+    position: absolute;
+    left: -160px;
+    bottom: 0;
+    /*left: 50%;*/
+    width: 0px;
+    height: 0px;
+    /*margin-left: -800px;*/
+    vertical-align: middle;
+    content: " ";
+    border-style: solid;
+    border-width: 0 500px 500px 500px;
+    border-color: transparent transparent #e76a3a transparent;
+    box-shadow: 0 0px 60px 1px #000;
+  }
+
+  #tri2 {
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    /*left: 50%;*/
+    width: 0px;
+    height: 0px;
+    /*margin-left: -800px;*/
+    vertical-align: middle;
+    content: " ";
+    border-style: solid;
+    border-width: 0 720px 720px 720px;
+    border-color: transparent transparent #267890 transparent;
+    /*box-shadow: 0 0px 60px 1px #000;*/
+  }
+
+  #round {
+    position: absolute;
+    top: -180px;
+    right: -60px;
+    width: 760px;
+    height: 760px;
+    border-radius: 500px;
+    background: #1f99b1;
+    /*box-shadow: inset 0px 0px 40px #000;*/
+    box-shadow: 0 0px 60px 1px #000;
+  }
+
+  .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-bottom: 5px solid black;
+  }
+
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    border-top: 20px solid #f00;
+  }
+
+  .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-left: 60px solid green;
+  }
+
+  .arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+    border-right:10px solid blue;
+  }
+
+  #yin-yang {
+    width: 96px;
+    height: 48px;
+    background: #eee;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    box-shadow: 0 0px 60px 1px #000;
+    animation: _rotate 2s linear infinite;
+  }
+
+  #yin-yang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #eee;
+    border: 18px solid black;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+  }
+
+  #yin-yang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: black;
+    border: 18px solid #eee;
+    border-radius:100%;
+    width: 12px;
+    height: 12px;
+  }
+  #yin-yang2 {
+    width: 96px;
+    height: 48px;
+    background: #fff;
+    border-color: #ffd700;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    box-shadow: 0 0px 60px 1px #ffff00;
+    animation: _rotate 2s linear infinite;
+  }
+  #yin-yang2:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #fff;
+    border: 18px solid #ffd700;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+  }
+
+  #yin-yang2:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffd700;
+    border: 18px solid #fff;
+    border-radius:100%;
+    width: 12px;
+    height: 12px;
+  }
+  #burst-12 {
+      background: #ffd700;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 300px;
+      top: 200px;
+      text-align: center;
+      box-shadow: 0 0px 60px 1px #ffff00;
+      animation: _rotate_breathe 6s ease-in-out infinite, move 3s;
+      border-radius: 6px;
+  }
+  #burst-12:before, #burst-12:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 80px;
+      width: 80px;
+      background: #ffd700;
+      border-radius: 6px;
+  }
+  #burst-12:before {
+      transform: rotate(30deg);
+      box-shadow: 0 0px 40px 1px #ffd700;
+  }
+  #burst-12:after {
+     transform: rotate(60deg);
+     box-shadow: 0 0px 20px 1px #ffd700;
+  }
+  @keyframes _rotate {
+    from {
+      transform: rotate(0deg)
+    } to {
+      transform: rotate(360deg)
+    }
+  }
+  @keyframes _rotate_breathe {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: 0 0px 60px 1px #fff;
+    }
+    50% {
+      transform: rotate(360deg);
+      box-shadow: 0 0px 100px 10px #ffff00;
+    }
+    100% {
+      transform: rotate(0deg);
+      box-shadow: 0 0px 60px 1px #fff;
+    }
+  }
+  @keyframes move {
+    from { top: 0; left: 0; opacity: 1;}
+    to   { top: 200px; left: 300px; opacity: 1;}
+  }
+  #pacman, #pacman_up, #pacman_down {
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid black;
+    border-left: 60px solid black;
+    border-bottom: 60px solid black;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  #pacman_up {
+    animation: _up 0.9s linear infinite;
+  }
+  @keyframes _up {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  #pacman_down {
+    animation: _down 0.9s linear infinite;
+  }
+  @keyframes _down {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .food {
+    position: absolute;
+    bottom: -145px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #000;
+  }
+  #food_00 {
+    left: 300px;
+  }
+  #food_01 {
+    left: 360px;
+  }
+  #food_02 {
+    left: 420px;
+  }
+  #food_group {
+    position: relative;
+    animation: _move_g 1s linear infinite;
+  }
+  @keyframes _move_g {
+    from {
+      left: 0px;
+    } to {
+      left: -100px;
+    }
+  }
+</style>
+<body>
+  <!-- <div class="aside"></div> -->
+  <div id="wrapper">
+    <div id="main">
+      <!-- <div style="width:150px">
+        <div id="test-linear-graient"></div>
+      </div> -->
+      <div id="tri2"></div>
+      <div id="tri"></div>
+      <div id="round"></div>
+
+      <div class="arrow-up"></div>
+      <div class="arrow-down"></div>
+      <div class="arrow-left"></div>
+      <div class="arrow-right"></div>
+
+      <div id="yin-yang"></div>
+      <div id="yin-yang2"></div>
+      <div id="burst-12"></div>
+      <div id="pacman"></div>
+      <div id="pacman_up"></div>
+      <div id="pacman_down"></div>
+
+      <div id="food_group">
+        <div id="food_00" class="food"></div>
+        <div id="food_01" class="food"></div>
+        <div id="food_02" class="food"></div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

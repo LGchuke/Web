@@ -1,0 +1,94 @@
+.circle {
+  height: 100px;
+  width: 100px;
+  background: #fff;
+  border-radius: 50%;
+}
+.circle:nth-child(1) {
+  -webkit-animation: depth1 2s 0.05s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+          animation: depth1 2s 0.05s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+}
+@-webkit-keyframes depth1 {
+  50%, 100% {
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  }
+}
+@keyframes depth1 {
+  50%, 100% {
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  }
+}
+.circle:nth-child(2) {
+  -webkit-animation: depth2 2s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+          animation: depth2 2s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+}
+@-webkit-keyframes depth2 {
+  50%, 100% {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  }
+}
+@keyframes depth2 {
+  50%, 100% {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+  }
+}
+.circle:nth-child(3) {
+  -webkit-animation: depth3 2s 0.15s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+          animation: depth3 2s 0.15s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+}
+@-webkit-keyframes depth3 {
+  50%, 100% {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  }
+}
+@keyframes depth3 {
+  50%, 100% {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  }
+}
+.circle:nth-child(4) {
+  -webkit-animation: depth4 2s 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+          animation: depth4 2s 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+}
+@-webkit-keyframes depth4 {
+  50%, 100% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+  }
+}
+@keyframes depth4 {
+  50%, 100% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+  }
+}
+.circle:nth-child(5) {
+  -webkit-animation: depth5 2s 0.25s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+          animation: depth5 2s 0.25s cubic-bezier(0.895, 0.03, 0.685, 0.22) infinite alternate;
+}
+@-webkit-keyframes depth5 {
+  50%, 100% {
+    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes depth5 {
+  50%, 100% {
+    box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+  }
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  background: #fff;
+}
