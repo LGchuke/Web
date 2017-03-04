@@ -1,15 +1,23 @@
 // window.addEventListener('load', function() { ... }, false);
 
-Switch = function() {
+var Switch = (function() {
   var flag = false;
-  console.log(flag == true);
-  if(flag == true)
-    flag = false;
-  else
-    flag = true;
-  console.log("click");
-  console.log(flag);
-};
+  return {
+    get_flag: function() {
+      return flag;
+    },
+    ss: function() {
+      flag = !flag;
+      return flag;
+    }
+  };
+})();
+
+
+// console.log( Switch.ss() );
+// console.log( Switch.get_flag() );
+// console.log( Switch.ss() );
+// console.log( Switch.get_flag() );
 
 window.onload = function() {
   width = window.innerWidth;
@@ -38,8 +46,23 @@ window.onload = function() {
   // console.log(pattern.png());
 
   btn.addEventListener('click', function() {
-
-    return Switch();
+    var flag = Switch.get_flag();
+    // console.log(flag);
+    if(!flag) {
+      // bg1.style.display = "none";
+      // bg2.style.display = "block";
+      bg1.classList.toggle('switch');
+      bg2.classList.toggle('switch');
+      Switch.ss();
+      console.log("bg2 show");
+    } else {
+      bg1.classList.toggle('switch');
+      bg2.classList.toggle('switch');
+      // bg1.style.display = "block";
+      // bg2.style.display = "none";
+      Switch.ss();
+      console.log("bg1 show");
+    }
   }, false);
 };
 
