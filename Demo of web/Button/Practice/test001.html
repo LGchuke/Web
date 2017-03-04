@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Exp 001</title>
+
+  <link rel="stylesheet" href="./css/t001.css">
+</head>
+<body>
+
+  <!-- <div class="btn-group">
+    <div id="square"></div>
+    <div id="btn-group-01" class="item"></div>
+    <div id="btn-group-02" class="item"></div>
+    <div id="btn-group-03" class="item"></div>
+  </div> -->
+
+  <div id="btnf">
+
+    <div id="exb3" class="btn-group">
+      <!-- <img src="./img/001.png"> -->
+    </div>
+    <div id="exb" class="btn-group">
+      <a href="#" class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
+    </div>
+    <div id="exb2" class="btn-group">
+      <a href="#" class="custom-toggle"><del class="bar"></del><del class="bar"></del><del class="bar"></del></a>
+    </div>
+
+
+  </div>
+
+
+
+  <button id="btn">Button</button>
+  <button id="btn-bigger">Bigger</button>
+  <button id="btn-smaller">Smaller</button>
+
+
+
+
+  <script src="./js/t001.js"></script>
+  <script src="./js/trianglify.min.js"></script>
+  <script>
+    var pattern = Trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    document.body.style.backgroundImage = 'url(' + pattern.png() + ')';
+    // console.log(pattern.png());
+  </script>
+</body>
+</html>
