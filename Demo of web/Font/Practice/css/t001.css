@@ -1,0 +1,87 @@
+.wrap {
+  position: relative;
+  width: 1000px;
+  height: 50px;
+}
+
+.th-caption-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.th-caption-div p {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 8s linear 0s;
+     -moz-transition: all 8s linear 0s;
+      -ms-transition: all 8s linear 0s;
+       -o-transition: all 8s linear 0s;
+          transition: all 8s linear 0s;
+}
+
+.th-caption-pre {
+  line-height: 50px;
+  height: 50px;
+  background: #777;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  overflow: hidden;
+}
+
+.th-caption {
+  width: 0;
+  line-height: 50px;
+  height: 50px;
+  background: #f77;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+.switch {
+  /*background: #00f;*/
+  width: 1000px;
+/*  -webkit-animation: gradual 4000ms ease 0s backwards;
+     -moz-animation: gradual 4000ms ease 0s backwards;
+      -ms-animation: gradual 4000ms ease 0s backwards;
+       -o-animation: gradual 4000ms ease 0s backwards;
+          animation: gradual 4000ms ease 0s backwards;*/
+}
+
+
+
+
+@-webkit-keyframes gradual {
+  0% {
+   /* -webkit-transform: translatex(-1000px);
+       -moz-transform: translatex(-1000px);
+        -ms-transform: translatex(-1000px);
+         -o-transform: translatex(-1000px);
+            transform: translatex(-1000px);*/
+    /*opacity: 0;*/
+  }
+
+  100% {
+    /*opacity: 1;*/
+  }
+}
+
+
+
+
+
+
+
+
