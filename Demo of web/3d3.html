@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style type="text/css">
+    .container {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+    }
+    #wrap {
+      position: relative;
+    }
+    .cover {
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      color: #fff;
+      font-size: 32px;
+      line-height: 64px;
+      text-align: center;
+    }
+    .edge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #000;
+    }
+
+    #a {
+      /*top: -32px;*/
+      background: #a0c;
+      /*transform: rotateX(90deg);*/
+      transform: rotateX(90deg) translate3d(0, -32px, 0);
+    }
+    #b {
+      /*top: 32px;*/
+      background: #0bd;
+      transform: rotateX(-90deg) translate3d(0, 32px, 0);
+      /*transform: rotateX(90deg);*/
+    }
+    #c {
+      /*left: -32px;*/
+      background: #c0e;
+      /*transform: rotateY(-90deg);*/
+      transform: rotateY(-90deg) translate3d(-32px, 0px, 0);
+    }
+    #d {
+      background: #d0f;
+      transform: translateZ(-32px);
+    }
+    #e {
+      /*left: 32px;*/
+      background: #e0a;
+      /*transform: rotateY(90deg);*/
+      transform: rotateY(90deg) translate3d(32px, 0px, 0);
+    }
+    #f {
+      background: #f0b;
+      transform: translateZ(32px);
+    }
+    #wrap {
+      display: block;
+      /*transform: translate3d(30px, 30px, 0);*/
+      -webkit-transition: all 0.85s ease;
+         -moz-transition: all 0.85s ease;
+          -ms-transition: all 0.85s ease;
+           -o-transition: all 0.85s ease;
+              transition: all 0.85s ease;
+      animation: spin 4s infinite linear;
+
+    }
+    #wrap:hover {
+      transform: rotateY(60deg);
+    }
+    @-webkit-keyframes spin {
+      from { transform: rotateY(0); }
+      to   { transform: rotateY(360deg); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="wrap">
+      <div id="a" class="cover">
+        A
+      </div>
+      <div id="b" class="cover">
+        B
+      </div>
+      <div id="c" class="cover">
+        C
+      </div>
+      <div id="d" class="cover">
+        D
+      </div>
+      <div id="e" class="cover">
+        E
+      </div>
+      <div id="f" class="cover">
+        F
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
