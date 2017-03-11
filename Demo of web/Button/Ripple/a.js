@@ -1,5 +1,5 @@
 (function (window, $) {
-
+  console.log("a");
   $(function() {
 
 
