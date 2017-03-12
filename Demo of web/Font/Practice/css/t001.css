@@ -34,6 +34,8 @@
 }
 
 .th-caption {
+/*  position: absolute;
+  left: -1000px;*/
   width: 0;
   line-height: 50px;
   height: 50px;
@@ -41,7 +43,7 @@
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  overflow: hidden;
+/*  overflow: hidden;*/
 }
 
 
@@ -53,6 +55,7 @@
 .switch {
   /*background: #00f;*/
   width: 1000px;
+  /*left: 0;*/
 /*  -webkit-animation: gradual 4000ms ease 0s backwards;
      -moz-animation: gradual 4000ms ease 0s backwards;
       -ms-animation: gradual 4000ms ease 0s backwards;
