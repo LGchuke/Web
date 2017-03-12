@@ -2,9 +2,12 @@ body{
   text-align: center;
 }
 
+.ripple {
 
+}
 button {
   /*background-color: transparent;*/
+    overflow: hidden;
   position: relative;
   border: none;
   outline:none;
