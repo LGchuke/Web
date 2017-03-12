@@ -17,6 +17,15 @@ button {
   padding: 18px 60px;
   border-radius: 4px;
   font-size: 22px;
+  -webkit-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+       -o-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 button > div {
