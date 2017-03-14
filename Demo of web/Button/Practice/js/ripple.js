@@ -19,8 +19,6 @@ function createInner(x, y) {
 
   console.log("e.offsetX: " + x);
   console.log("e.offsetY: " + y);
-  // console.log(inner.offsetHeight);
-  // console.log((y - inner.offsetHeight/2));
 
   inner.style.left = (x - inner.offsetWidth/2) + 'px';
   inner.style.top = (y - inner.offsetHeight/2) + 'px';
@@ -37,6 +35,7 @@ for (var i = 0; i < buttons.length; i++) {
     var RadiusX = (this.offsetWidth - offsetX > offsetX?this.offsetWidth - offsetX:offsetX);
     var RadiusY = (this.offsetHeight - offsetY > offsetY?this.offsetHeight - offsetY:offsetY);
     var maxRadius = Math.sqrt(Math.pow(RadiusX, 2) + Math.pow(RadiusY, 2));
+
     // var inner = document.createElement('div');
     var inner = createInner(offsetX, offsetY);
     this.appendChild(inner);
