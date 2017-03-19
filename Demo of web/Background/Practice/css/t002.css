@@ -39,7 +39,7 @@
 }
 
 .bg-back {
-  background-image: url(../img/grass-back.svg);
+  /*background-image: url(../img/grass-back.svg);*/
   /*animation: lines-front 30000ms linear 0s infinite;*/
 }
 
@@ -49,7 +49,7 @@
 }
 
 .bg-medium {
-  background-image: url(../img/grass-medium.svg);
+  /*background-image: url(../img/grass-medium.svg);*/
   /*animation: lines-front 20000ms linear 0s infinite;*/
 }
 
@@ -60,8 +60,8 @@
 
 .bg-front {
   background-image: url(../img/grass-front.svg);
-  animation: lines-front 3200ms linear 0s infinite;
-  /*transform: translateX(0.3);*/
+  /*animation: lines-front 3200ms linear 0s infinite;*/
+  transform: translateX(63.9%);
 }
 
 #bg-front-two {
@@ -74,21 +74,22 @@
 
 #bg-front-refer {
   animation: none;
+  transform: translateX(0%);
 }
 @-webkit-keyframes lines-front {
   0% {
-    -webkit-transform: translateX(-63.9%);
-       -moz-transform: translateX(-63.9%);
-        -ms-transform: translateX(-63.9%);
-         -o-transform: translateX(-63.9%);
-            transform: translateX(-63.9%);
-  }
-
-  100% {
     -webkit-transform: translateX(0%);
        -moz-transform: translateX(0%);
         -ms-transform: translateX(0%);
          -o-transform: translateX(0%);
             transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(63.9%);
+       -moz-transform: translateX(63.9%);
+        -ms-transform: translateX(63.9%);
+         -o-transform: translateX(63.9%);
+            transform: translateX(63.9%);
   }
 }
