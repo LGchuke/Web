@@ -1,0 +1,12 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+  margin: 0;
+}
+img {
+  width: 80vmin;
+  height: 80vmin;
+}
