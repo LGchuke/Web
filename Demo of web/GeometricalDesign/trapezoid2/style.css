@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%;
+}
+
+#another {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  display: inline-block;
+  padding: 2rem 4rem 1.6rem;
+  color: white;
+}
+#another::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  background: #58a;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 40px;
+  transform: perspective(70px) rotate3d(1, 0, 0, 0deg);
+}
