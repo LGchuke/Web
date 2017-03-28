@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+}
+
+$color: #49e;
+$width: 10rem;
+$height: 10rem;
+$top: 30%;
+$left: 40%;
+
+#block1 {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: 0;
+  background: $color;
+  border-left: 0px solid transparent;
+  border-top: 100px solid $color;
+  border-right: 0px solid transparent;
+  transition: all 0.8s linear;
+  .switch {
+    // transform: rotate3d(1, 0, 0, 90deg);
+    animation: switch 4000ms linear 1s infinite;
+  }
+}
+
+@-webkit-keyframes switch {
+  0%, 50% {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50%, 100% {
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+}

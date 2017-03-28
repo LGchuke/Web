@@ -1,0 +1,13 @@
+
+#block1 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 10rem;
+  height: 10rem;
+  background: #49e;
+}
+
+#block1.switch {
+
+}
