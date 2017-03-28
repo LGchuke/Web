@@ -7,8 +7,8 @@ hideBlocks(timelineBlocks, offset);
 
 window.onscroll = function() {
   (!window.requestAnimationFrame)
-  ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-  : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
+  ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 500)
+  : window.requestAnimationFrame(function(){ setTimeout(showBlocks(timelineBlocks, offset), 500); });
 };
 
 function showBlocks(blocks, offset) {
@@ -37,7 +37,7 @@ function hideBlocks(blocks, offset) {
 
 
 
-// such stupid methods
+// such stupid methods: teaching material by negative example ｜ material for teaching by negative example
 function addClassString(ec, _class) {
   var classNames = ec.split(/\s+/);
   classNames[classNames.length] = _class;

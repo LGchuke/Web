@@ -22,3 +22,19 @@
   border-top: 100px solid red;
   @include co();
 }
+
+
+#another {
+  position: relative;
+  display: inline-block;
+  padding: .5em 1em .35em;
+  color: white;
+  ::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    background: #58a;
+    transform: perspective(.5em) rotateX(5deg);
+  }
+}

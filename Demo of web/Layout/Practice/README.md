@@ -101,6 +101,5 @@ flex-grow 属性
 ```
 
 
-
 flex 属性
-是 <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code> 的简写，默认值为0 1 auto。后两个属性可选。
+是 <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code> 的简写，默认值为0 1 auto。后两个属性可选
