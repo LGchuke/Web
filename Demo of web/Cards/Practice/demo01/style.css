@@ -1,0 +1,44 @@
+
+body {
+  background: #eee;
+}
+
+.wrap {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 200px;
+  height: 220px;
+  /*overflow: hidden;*/
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 122px;
+  background: #fff;
+  box-shadow: 0 2px 1px 0px #333;
+  z-index: 9999;
+}
+
+.card:before,
+.card:after {
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 122px;
+  background: #fff;
+  box-shadow: 0 2px 1px 0px #333;
+}
+
+.card:before {
+  left: 6px;
+  top: 9px;
+  z-index: 90;
+}
+
+.card:after {
+  left: 12px;
+  top: 18px;
+  z-index: 80;
+}
