@@ -9,36 +9,55 @@ body {
   left: 40%;
   width: 200px;
   height: 220px;
-  /*overflow: hidden;*/
 }
 
 .card {
   position: relative;
-  width: 200px;
-  height: 122px;
+  width: 400px;
+  height: 244px;
   background: #fff;
-  box-shadow: 0 2px 1px 0px #333;
-  z-index: 9999;
+  box-shadow: 0 1px 1px 0px #333;
+  /*z-index: 10; !!! forbidden !!! */
 }
 
 .card:before,
 .card:after {
   position: absolute;
   content: '';
-  width: 200px;
-  height: 122px;
+  height: 244px;
   background: #fff;
-  box-shadow: 0 2px 1px 0px #333;
+  box-shadow: 0 1px 1px 0px #333;
 }
 
 .card:before {
   left: 6px;
-  top: 9px;
-  z-index: 90;
+  top: 6px;
+  width: 388px;
+  z-index: -2;
 }
 
 .card:after {
   left: 12px;
-  top: 18px;
-  z-index: 80;
+  top: 12px;
+  width: 376px;
+  z-index: -3;
+}
+
+.card hr {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border: none;
+}
+.card hr:nth-child(1) {
+  top: 20%;
+}
+.card hr:nth-child(2) {
+  top: 40%;
+}
+.card hr:nth-child(3) {
+  top: 60%;
+}
+.card hr:nth-child(4) {
+  top: 80%;
 }
