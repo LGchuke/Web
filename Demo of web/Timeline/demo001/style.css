@@ -60,19 +60,20 @@ h1 {
   border-radius: 50%;
   background: inherit;
 }
-
+/* 0 7 与 -16 23*/
 .timeline ul li div {
   position: relative;
-  bottom: 0;
+  bottom: -25px;
   width: 400px;
   padding: 15px;
   background: #F45B69;
+  border-radius: 10px;
 }
 
 .timeline ul li div::before {
   content: '';
   position: absolute;
-  bottom: 7px;
+  bottom: 32px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -123,12 +124,20 @@ time {
   transition: all .5s ease-in-out;
 }
 
-.timeline ul li:nth-child(odd) div {
+.timeline ul li div p {
+  display: none;
+}
+
+/*.timeline ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
 
 .timeline ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
+}*/
+
+.timeline ul li div {
+  transform: translate3d(0, -100px, 0);
 }
 
 .timeline ul li.in-view div {
@@ -137,6 +146,9 @@ time {
   opacity: 1;
 }
 
+.timeline ul li.in-view div:hover p {
+  display: block;
+}
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
