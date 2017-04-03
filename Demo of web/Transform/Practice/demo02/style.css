@@ -1,0 +1,64 @@
+body {
+  background: #333;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+#root {
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.et-box {
+  position: relative;
+  width: 32px;
+  height: 45px;
+}
+
+.et-box .front,
+.et-box .bg {
+  position: absolute;
+}
+
+.et-box .bg {
+  font-weight: 0;
+}
+
+#b1.switch .front,
+#b1.switch .bg {
+  transition: all 0.5s;
+}
+
+#b1.switch .front {
+  opacity: 0;
+}
+
+#b1.switch .bg {
+  text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #333, 0 0 7px #333, 0 0 8px #333, 0 0 10px #333, 0 0 15px #333;
+  /*opacity: 0;*/
+  animation: bg1 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes bg1 {
+  0%, 33% {
+    transform: scale(1.2);
+    text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #333, 0 0 7px #333, 0 0 8px #333, 0 0 10px #333, 0 0 15px #333;
+  }
+  33%, 66% {
+    transform: scale(1);
+    text-shadow: 0 0 2px #333, 0 0 4px #333, 0 0 6px #333, 0 0 8px #555, 0 0 14px #555, 0 0 16px #555, 0 0 20px #555, 0 0 30px #555;
+  }
+  67%, 100% {
+    opacity: 0;
+  }
+
+/*  from {
+    text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #333, 0 0 7px #333, 0 0 8px #333, 0 0 10px #333, 0 0 15px #333;
+  }
+  to {
+    text-shadow: 0 0 2px #333, 0 0 4px #333, 0 0 6px #333, 0 0 8px #555, 0 0 14px #555, 0 0 16px #555, 0 0 20px #555, 0 0 30px #555;
+  }*/
+}
