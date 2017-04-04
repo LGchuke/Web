@@ -1,6 +1,5 @@
 body {
   background: #333;
-  font-weight: 500;
   font-size: 32px;
 }
 
@@ -9,6 +8,8 @@ body {
   position: absolute;
   top: 40%;
   left: 40%;
+  display: flex;
+  flex-direction: row;
 }
 
 .et-box {
@@ -23,7 +24,7 @@ body {
 }
 
 .et-box .bg {
-  font-weight: 0;
+  font-weight: 100;
 }
 
 #b1.switch .front,
@@ -31,16 +32,77 @@ body {
   transition: all 0.5s;
 }
 
+/*.switch .bg {
+  animation: test 2s ease-in-out infinite alternate;
+}*/
+
 #b1.switch .front {
   opacity: 0;
 }
 
-#b1.switch .bg {
-  text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #333, 0 0 7px #333, 0 0 8px #333, 0 0 10px #333, 0 0 15px #333;
-  /*opacity: 0;*/
-  animation: bg1 2s ease-in-out infinite alternate;
+/*#b1*/
+.switch .bg {
+  /*color: #aaa;*/
+  color: transparent;
+  /*text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #333, 0 0 7px #333, 0 0 8px #333, 0 0 10px #333, 0 0 15px #333;*/
+  /*text-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 4px #333, 0 0 5px #333, 0 0 6px #333, 0 0 7px #333, 0 0 8px #333;*/
+  /*text-shadow: 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;*/
+  text-shadow: 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  opacity: 1;
+  /*animation: bg1 2s ease-in-out infinite alternate;*/
+  animation: test 2s ease-in-out infinite alternate;
 }
 
+@keyframes test {
+  0%, 20% {
+    text-shadow: 0 0 1px #000, 0 0 2px #111, 0 0 3px #222, 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  20%, 30% {
+    text-shadow: 0 0 2px #111, 0 0 3px #222, 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  30%, 40% {
+    text-shadow: 0 0 3px #222, 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  40%, 50% {
+    text-shadow: 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  50%, 90% {
+    opacity: 0.6;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+  /*50%, 60% {
+    text-shadow: 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  60%, 70% {
+    text-shadow: 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  70%, 80% {
+    text-shadow: 0 0 7px #666, 0 0 8px #777;
+  }
+  80%, 90% {
+    text-shadow: 0 0 8px #777;
+  }
+  90%, 100% {
+    text-shadow: 0 0 0px #777;
+  }*/
+
+}
+
+@keyframes test {
+  from {
+    /*color: #333;*/
+    /*text-shadow: 0 0 6px #333, 0 0 7px #444, 0 0 8px #555, 0 0 9px #666, 0 0 10px #777, 0 0 11px #888, 0 0 12px #999, 0 0 13px #aaa;*/
+    /*text-shadow: 0 0 1px #333, 0 0 2px #444, 0 0 3px #555, 0 0 4px #666, 0 0 5px #777, 0 0 6px #888, 0 0 7px #999, 0 0 8px #aaa;*/
+    text-shadow: 0 0 1px #000, 0 0 2px #111, 0 0 3px #222, 0 0 4px #333, 0 0 5px #444, 0 0 6px #555, 0 0 7px #666, 0 0 8px #777;
+  }
+  to {
+    /*color: #fff;*/
+    /*text-shadow: 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #000, 0 0 9px #333, 0 0 10px #333, 0 0 11px #333, 0 0 12px #333, 0 0 13px #333;*/
+    text-shadow: 0 0 0px #fff;
+  }
+}
 
 @keyframes bg1 {
   0%, 33% {
