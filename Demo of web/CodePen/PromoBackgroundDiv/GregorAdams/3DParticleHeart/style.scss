@@ -1,0 +1,169 @@
+$view-size: 600px;
+$cube-size: 30px;
+$margin: 2px;
+
+$color: #E31749;
+
+$cubes: 14;
+$layers: 6;
+
+$duration: 3s;
+$intro-duration: 1s;
+$intro-delay: 1s;
+
+@function n($v) {
+  $n: round(random())*2 - 1;
+  @return $n * $v;
+}
+
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #222;
+}
+
+
+
+.view {
+  height: $view-size;
+  width: $view-size;
+  visibility: hidden;
+
+  perspective: 700px;
+  perspective-origin: 50% 0;
+
+  * {
+    transform-style: preserve-3d;
+  }
+
+
+}
+
+
+.cube {
+  position: relative;
+  height: 50%;
+  width: 100%/$cubes*2;
+  //box-shadow: 0 0 0 2px inset;
+  animation: enter $intro-duration $intro-delay forwards;
+
+  .inner {
+    position: absolute;
+    top: $margin;
+    right: $margin;
+    bottom: $margin;
+    left: $margin;
+  }
+
+  .side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    //background: red;
+
+
+
+    &:nth-child(1) {
+      transform: rotateX(-90deg) translateZ($cube-size/2 - $margin);
+      background: mix($color, white, 70%);
+    }
+    &:nth-child(2) {
+      transform: rotateX(90deg) translateZ($cube-size/2 - $margin);
+      background: mix($color, white, 70%);
+    }
+    &:nth-child(3) {
+      transform: rotateY(90deg) translateZ($cube-size/2 - $margin);
+      background: mix($color, white, 90%);
+    }
+    &:nth-child(4) {
+      transform: rotateY(-90deg) translateZ($cube-size/2 - $margin);
+      background: mix($color, white, 90%);
+    }
+    &:nth-child(5) {
+      transform: rotateY(-180deg) translateZ($cube-size/2 - $margin);
+      background: mix($color, black, 90%);
+    }
+    &:nth-child(6) {
+      transform: rotateY(0) translateZ($cube-size/2 - $margin);
+      background: mix($color, black, 90%);
+    }
+  }
+}
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: $cube-size*2;
+  width: $cube-size*$cubes/2;
+//  outline: 2px solid;
+
+
+  .axis {
+    //background: orange;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    animation: rotate $duration cubic-bezier(.81,-0.59,.54,1.8) infinite;
+  }
+  $n: 0;
+  @for $i from 0 to $layers {
+    &:nth-child(#{$i + 1}) {
+      transform: translate(-50%,-50%) translateY(50%*($i - $layers/2)) rotateX(90deg);
+      z-index: $layers -$i;
+      .axis {
+        animation-delay: $i*$duration/$layers /2 + $intro-duration + $intro-delay;
+      }
+
+      @for $j from 0 to $cubes {
+        $x:n($cube-size*random($cubes));
+        $y:n($cube-size*random($cubes));
+        $z:n($cube-size*random($cubes));
+        $n: $n + 1;
+        .cube {
+          &:nth-child(#{$j + 1}) {
+             transform: translate3d($x,$y,$z);
+          }
+        }
+        @keyframes enter-#{$n} {
+          to {
+             transform: translate3d(0,0,0);
+           }
+
+          }
+      }
+
+    }
+
+
+  }
+}
+
+@keyframes enter {
+  to {
+     transform: translate3d(0,0,0);
+   }
+
+}
+
+@keyframes rotate {
+  0% {
+    transform:  rotate(0);
+  }
+   50%,100% {
+    transform:  rotate(360deg);
+  }
+}
+
