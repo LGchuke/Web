@@ -1,0 +1,397 @@
+@font-face {
+  font-family: 'Trek Symbols'; }
+@font-face {
+  font-family: 'airborne'; }
+/*Font mixin from https://eduardoboucas.com/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html
+*/
+body {
+  overflow: hidden; }
+
+#backing {
+  width: 5000px;
+  height: 5000px;
+  position: absolute;
+  background-image: url(https://i.imgsafe.org/259fc46649.gif);
+  background-size: 35% 10%;
+  background-position: 100% 100%;
+  transform: rotate(40deg);
+  Left: -2000px;
+  top: -2000px; }
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #wrapper #overlay {
+    position: Absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+    #wrapper #overlay:before, #wrapper #overlay:after {
+      font-family: 'Trek Symbols';
+      position: absolute;
+      color: black;
+      font-size: 9vw;
+      text-shadow: .1vw .1vw .1vw cornflowerblue, -.1vw -.1vw .1vw green, -.1vw .1vw .1vw green, .1vw .2vw .1vw cornflowerblue; }
+    #wrapper #overlay:before {
+      right: 15%;
+      top: 5%;
+      content: 'L'; }
+    #wrapper #overlay:after {
+      top: 3%;
+      right: 5%;
+      content: 'I'; }
+  #wrapper #box {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation: float 1s ease-in-out infinite;
+    transform: translate3d(-25vw, -25vw, 0vw); }
+    #wrapper #box .enterpriseLower {
+      transform: perspective(800px) rotateX(50deg) translate3d(-0.35vw, 0vw, -1vw);
+      position: absolute;
+      width: 61%;
+      max-width: 460px;
+      max-height: 450px;
+      height: 60%;
+      background: radial-gradient(circle farthest-corner at 24vw -10vw, #323232 81%, #d7d6d4 90%);
+      border-radius: 50%;
+      z-index: 1000;
+      border: 0.2vw solid #ababa9; }
+      #wrapper #box .enterpriseLower .tail {
+        width: 55%;
+        height: 15%;
+        background: linear-gradient(to bottom, #5a5a5a, #ababa9 50%, #d7d6d4);
+        position: absolute;
+        top: 5%;
+        left: -20%;
+        border-radius: 30%;
+        transform: rotate(40deg); }
+        #wrapper #box .enterpriseLower .tail .side {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 5%;
+          top: 9%;
+          background: -webkit-linear-gradient(top, transparent 0%, transparent, 80%, grey 80%);
+          background: linear-gradient(to bottom, transparent 0%, transparent, 80%, grey 80%);
+          border-radius: 0 0 30% 30%; }
+        #wrapper #box .enterpriseLower .tail:before {
+          content: '';
+          width: 99%;
+          height: 15%;
+          background: repeating-linear-gradient(to right, #ababa9 0%, grey 5%, #ababa9 5%, grey 10%);
+          position: absolute;
+          top: 45%;
+          left: 51%;
+          transform: translate(-50%, -50%);
+          border-radius: 5px; }
+      #wrapper #box .enterpriseLower .arm1 {
+        background: linear-gradient(to left, #5a5a5a, #ababa9 70%, #d7d6d4);
+        width: 20%;
+        height: 5%;
+        position: absolute;
+        z-index: -1;
+        transform: rotate(-67deg) translate3d(3vw, -4.5vw, 0vw);
+        box-shadow: inset 0 0 0 1px darkslategrey; }
+      #wrapper #box .enterpriseLower .armRod1,
+      #wrapper #box .enterpriseLower .armRod2 {
+        width: 70%;
+        height: 15%;
+        position: absolute;
+        background: radial-gradient(ellipse farthest-corner at 9vw -3vw, #323232 30%, white);
+        transform: rotate(40deg) translate3d(-100%, -10%, 0vw);
+        border-radius: 50px 0 0 50px; }
+        #wrapper #box .enterpriseLower .armRod1 .side,
+        #wrapper #box .enterpriseLower .armRod2 .side {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 5%;
+          top: 18%;
+          background: -webkit-linear-gradient(top, transparent 0%, transparent, 80%, grey 80%);
+          background: linear-gradient(to bottom, transparent 0%, transparent, 80%, grey 80%);
+          border-radius: 0 0 30% 30%; }
+        #wrapper #box .enterpriseLower .armRod1:after,
+        #wrapper #box .enterpriseLower .armRod2:after {
+          content: '';
+          position: absolute;
+          height: 80%;
+          width: 14%;
+          top: 0%;
+          right: -11%;
+          background: radial-gradient(ellipse farthest-corner at -1vw -9vw, #87ceeb 30%, #2e8b57);
+          border-radius: 50%;
+          border-left: .3vw solid darkgrey;
+          border-bottom: .6vw solid darkgrey;
+          border-top: 0.4vw solid darkgrey;
+          box-shadow: 0 0 25px black, inset 10px 0 19px -9px black; }
+        #wrapper #box .enterpriseLower .armRod1:before,
+        #wrapper #box .enterpriseLower .armRod2:before {
+          content: '';
+          width: 99%;
+          height: 15%;
+          background: repeating-linear-gradient(to right, darkgrey 0%, grey 5%, darkgrey 5%, grey 10%);
+          position: absolute;
+          top: 40%;
+          left: 50.25%;
+          transform: translate(-50%, -50%);
+          border-radius: 5px; }
+      #wrapper #box .enterpriseLower .arm2 {
+        width: 20%;
+        height: 5%;
+        position: absolute;
+        background: linear-gradient(to right, #5a5a5a, #ababa9 35%, #d7d6d4);
+        transform: rotate(-45deg) skew(51deg) translate3d(-2vw, -3.5vw, 0vw);
+        z-index: -1;
+        box-shadow: inset 0 0 0 1px darkslategrey; }
+      #wrapper #box .enterpriseLower .armRod2 {
+        background: radial-gradient(ellipse farthest-corner at 10vw 8vw, #323232 30%, #ffffff);
+        transform: rotate(40deg) translate3d(-93%, 280%, 0vw) scale(0.9, 0.9); }
+        #wrapper #box .enterpriseLower .armRod2:after {
+          background: radial-gradient(ellipse farthest-corner at 4vw 2vw, #87ceeb 30%, #2e8b57);
+          box-shadow: 0 0 25px black, inset 6px 6px 19px -9px black; }
+    #wrapper #box .photonTorpedo {
+      width: 25%;
+      height: 3%;
+      position: relative;
+      background: radial-gradient(ellipse at right, rgba(0, 0, 255, 0.8) 0%, rgba(0, 0, 255, 0.7) 25%, transparent 80%);
+      transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(22vw, 5vw, -1vw);
+      z-index: -10;
+      border-radius: 4vw;
+      box-shadow: 4px 0px 6px -4px skyblue;
+      animation: photonTorpedo 5s ease infinite; }
+      #wrapper #box .photonTorpedo:before {
+        content: '';
+        width: 110%;
+        height: 150%;
+        top: -25%;
+        right: 0;
+        position: absolute;
+        background: radial-gradient(ellipse at right, rgba(0, 128, 0, 0.35) 0%, transparent 80%);
+        border-radius: 4vw; }
+    #wrapper #box .torpedoGlow {
+      width: 58%;
+      max-width: 440px;
+      max-height: 440px;
+      height: 58%;
+      transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(8vw, 0vw, 0vw);
+      background: radial-gradient(ellipse at right, rgba(0, 128, 0, 0.35) 0%, transparent 80%);
+      border-radius: 0 50% 50% 0;
+      position: absolute;
+      animation: photonTorpedoGlow 5s ease infinite;
+      -webkit-filter: blur(5px); }
+    #wrapper #box .enterprise {
+      position: absolute;
+      width: 60%;
+      max-width: 450px;
+      max-height: 450px;
+      height: 60%;
+      background: radial-gradient(#d7d6d4, #d7d6d4 15%, #ababa9 15%, #ababa9 16%, #d7d6d4 17%, #d7d6d4 22%, #ababa9 22%, #ababa9 23%, #d7d6d4 23%, #d7d6d4 27%, #ababa9 27%, #ababa9 28%, #d7d6d4 28%, #d7d6d4 33%, #ababa9 33%, #ababa9 34%, #d7d6d4 34%, #d7d6d4 39%, #ababa9 39%, #ababa9 40%, #d7d6d4 40%, #d7d6d4 45%, #ababa9 45%, #ababa9 46%, #d7d6d4 46%, #d7d6d4 51%, #ababa9 51%, #ababa9 52%, #d7d6d4 52%, #d7d6d4 57%, #ababa9 57%, #ababa9 58%, #d7d6d4 58%, #d7d6d4 63%, #ababa9 63%, #ababa9 64%, #d7d6d4 64%);
+      transform: perspective(800px) rotateX(50deg);
+      border-radius: 50%;
+      border: 0.2vw solid #ababa9;
+      z-index: 9999; }
+      #wrapper #box .enterprise:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: radial-gradient(ellipse farthest-corner at 40vw 5vw, rgba(50, 50, 50, 0.6) 30%, rgba(255, 255, 255, 0.4));
+        z-index: 2; }
+      #wrapper #box .enterprise .eLine {
+        width: 1%;
+        height: 39%;
+        background: #ababa9;
+        z-index: -1;
+        position: absolute; }
+        #wrapper #box .enterprise .eLine:nth-child(1) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(25.55deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(2) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(51.1deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(3) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(76.65deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(4) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(102.2deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(5) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(127.75deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(6) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(153.3deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(7) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(178.85deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(8) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(204.4deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(9) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(229.95deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(10) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(255.5deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(11) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(281.05deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(12) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(306.6deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(13) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(332.15deg) translate3d(0vw, 79%, 0vw); }
+        #wrapper #box .enterprise .eLine:nth-child(14) {
+          right: 49.5%;
+          top: 30.5%;
+          position: absolute;
+          transform: rotate(357.7deg) translate3d(0vw, 79%, 0vw); }
+      #wrapper #box .enterprise .shipLogo {
+        font-family: 'airborne';
+        position: Absolute;
+        width: 50%;
+        font-size: 34px;
+        font-size: 2.25vw;
+        text-transform: uppercase;
+        transform: rotate(-45deg) translate3d(-35%, 1100%, 0vw);
+        z-index: 5; }
+        @media (max-width: 100vw) {
+          #wrapper #box .enterprise .shipLogo {
+            font-size: 2.25vw; } }
+        @media (min-width: 1511.11111px) {
+          #wrapper #box .enterprise .shipLogo {
+            font-size: 34px; } }
+        #wrapper #box .enterprise .shipLogo:before {
+          content: 'U.S.S. Enterprise';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: -100%;
+          left: 0;
+          text-align: center;
+          font-size: 1vw;
+          font-size: 20px;
+          font-size: 1vw; }
+          @media (max-width: 100vw) {
+            #wrapper #box .enterprise .shipLogo:before {
+              font-size: 1vw; } }
+          @media (min-width: 2000px) {
+            #wrapper #box .enterprise .shipLogo:before {
+              font-size: 20px; } }
+        #wrapper #box .enterprise .shipLogo span {
+          display: inline-block;
+          height: 100%;
+          width: 12.5%;
+          text-align: center; }
+        #wrapper #box .enterprise .shipLogo span:nth-child(1) {
+          transform: rotate(38deg) translate3d(25%, -22%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(2) {
+          transform: rotate(33deg) translate3d(32%, 25%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(3) {
+          transform: rotate(25deg) translate3d(35%, 64%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(4) {
+          transform: rotate(15deg) translate3d(44%, 78%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(5) {
+          transform: rotate(0deg) translate3d(24%, 98%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(6) {
+          transform: rotate(-11deg) translate3d(-2%, 90%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(7) {
+          transform: rotate(-16deg) translate3d(5%, 63%, 0vw); }
+        #wrapper #box .enterprise .shipLogo span:nth-child(8) {
+          transform: rotate(-29deg) translate3d(0%, 34%, 0vw); }
+      #wrapper #box .enterprise .centerDot {
+        width: 15%;
+        height: 15%;
+        background: darkgrey;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 2; }
+        #wrapper #box .enterprise .centerDot:after {
+          content: '';
+          width: 40%;
+          height: 40%;
+          position: absolute;
+          background: radial-gradient(circle farthest-corner at 1vw -1vw, rgba(240, 248, 255, 0.95), darkgrey 75%, rgba(240, 248, 255, 0.55) 95%);
+          border-radius: 50%;
+          box-shadow: 0 1px 1px 0px black;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+
+/* Standard syntax */
+@keyframes float {
+  0% {
+    transform: translate3d(-25vw, -25vw, 0vw) scale(0.7, 0.7); }
+  50% {
+    transform: translate3d(-25vw, -26vw, 0vw) scale(0.7, 0.7); }
+  100% {
+    transform: translate3d(-25vw, -25vw, 0vw) scale(0.7, 0.7); } }
+@keyframes photonTorpedoGlow {
+  0% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(0vw, 0vw, 0vw);
+    background: radial-gradient(ellipse at right, rgba(0, 0, 255, 0.35) 0%, transparent 80%); }
+  70% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(0vw, 0vw, 0vw);
+    background: radial-gradient(ellipse at right, rgba(0, 0, 255, 0.35) 0%, transparent 80%); }
+  80% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(10%, 0vw, 0vw);
+    background: radial-gradient(ellipse at right, rgba(0, 0, 255, 0.35) 0%, transparent 80%); }
+  95% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(0vw, 0vw, 0vw);
+    background: radial-gradient(ellipse at right, rgba(0, 0, 255, 0.35) 0%, transparent 40%); }
+  100% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(0vw, 0vw, 0vw);
+    background: radial-gradient(ellipse at right, rgba(0, 0, 255, 0.35) 0%, transparent 40%); } }
+@keyframes photonTorpedo {
+  0% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(100%, 5vw, -1vw); }
+  85% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(100%, 5vw, -1vw); }
+  100% {
+    transform: perspective(800px) rotateX(50deg) rotate(50deg) translate3d(120vw, 5vw, -1vw); } }
+
+/*# sourceMappingURL=style.css.map */
