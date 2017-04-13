@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style type="text/css">
+    #filter1 {
+      left: 30px;
+      top: 28px;
+      width: 240px;
+
+    }
+    #filter2 {
+      left: 740px;
+      top: 67px;
+      width: 100px;
+    }
+    .filter {
+      position: absolute;
+      background: #333;
+      height: 38px;
+      filter: blur(4px);
+    }
+    #img3 {
+      position: absolute;
+      left: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <div id="filter1" class="filter"></div>
+    <div id="filter2" class="filter"></div>
+    <img src="./t.png">
+    <br />
+    <img src="./2.png">
+    <br />
+    <img id="img3" src="./3.png">
+  </div>
+</body>
+</html>
