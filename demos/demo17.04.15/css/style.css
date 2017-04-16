@@ -28,6 +28,7 @@ html {
   box-sizing: border-box;
   transition: .6s cubic-bezier(.3, 0, 0, 1.3);
   transform: translateY(4rem);
+  opacity: 0;
 }
 
 #b1 ul > li {
@@ -41,4 +42,5 @@ html {
 
 .et-item.switch {
   transform: translateY(0);
+  opacity: 1;
 }
