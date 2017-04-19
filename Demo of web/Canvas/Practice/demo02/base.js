@@ -8,28 +8,53 @@ if(ca.getContext) {
   var x = 300,
       y = 300,
       radius = 60,
-      splitCount = 32.0;
-      delay = 100;
+      splitCount = 8.0;
+      delay = 20;
 
-  // cot.arc(100, 100, 99, 0, 2 * 0.75 * Math.PI, false);
+  cot.arc(x, y, 99, 0, 2 * Math.PI, false);
 
-  // cot.moveTo(194, 100);
-  // cot.arc(100, 100, 94, 0, 2 * Math.PI, false);
+  cot.moveTo(x + 94, y);
+  cot.arc(x, y, 94, 0, 2 * Math.PI, false);
 
-  // cot.moveTo(10, 20);
-  // cot.lineTo(20, 30);
+  cot.moveTo(x, y);
+  cot.lineTo(x, y - 85);
+
+  cot.moveTo(x, y);
+  cot.lineTo(x - 65, y);
 
   // cot.closePath();
 
-  // cot.stroke();
+  cot.font = 'bold 14px Arial';
+  cot.textAlign = 'center'; // default is 'start'
+  cot.textBaseline = 'middle';
+  cot.fillText('12', x, y - 80);
 
-  var tx = (function() {
-    for (let i = 0; i < splitCount; i++) {
-      setTimeout(() => {
-        cot.arc(x, y, radius, 2.0 * (i / splitCount) * Math.PI, 2.0 * ((i + 1) / splitCount) * Math.PI, false);
-        cot.stroke();
-      }, delay * i);
-    }
-  });
-  tx();
+  cot.stroke();
+
+  if(cot.isPointInPath(x, y)) {
+    console.log('yes');
+  }
+
+  // var tx = (function() {
+  //   for (let i = 0; i < splitCount; i++) {
+  //     setTimeout(() => {
+  //       cot.arc(x, y, radius, 2.0 * (i / splitCount) * Math.PI, 2.0 * ((i + 1) / splitCount) * Math.PI, false);
+  //       cot.stroke();
+  //     }, delay * i);
+  //   }
+  // });
+  // tx();
+
+  var fontSize = 100;
+  cot.font = fontSize + 'px Arial';
+  var str = 'Test words!';
+
+  while(cot.measureText(str).width > 140) {
+    fontSize--;
+    cot.font = fontSize + 'px Arial';
+  }
+
+  cot.fillText(str, 100, 10);
+  cot.fillText('Font size is ' + fontSize + 'px', 100, 50);
+
 }
