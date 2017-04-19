@@ -1,0 +1,14 @@
+.grid {
+  border: solid 4px #e7e7e7;
+}
+
+.grid_row {
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.grid_item {
+  flex: 1;
+  padding: 12px;
+  border: solid 1px #368916;
+}

@@ -1,0 +1,36 @@
+body {
+  width: 400px;
+}
+
+.grid {
+  border: solid 4px #e7e7e7;
+}
+
+.grid_row {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid_item {
+  flex: 1;
+  padding: 12px;
+  border: solid 1px #368916;
+}
+
+@media all and ( min-width: 480px ) {
+  .grid_row--sm {
+    flex-direction: row;
+  }
+}
+
+@media all and ( min-width: 720px ) {
+  .grid_row--md {
+    flex-direction: row;
+  }
+}
+
+@media all and ( min-width: 960px ) {
+  .grid_row--lg {
+    flex-direction: row;
+  }
+}
