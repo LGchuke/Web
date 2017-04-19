@@ -1,0 +1,25 @@
+#.gitignore
+
+# Mac
+.DS_Store
+
+# img
+*.png
+*.jpg
+*.gif
+*.svg
+
+*.pdf
+*.txt
+
+# SASS
+.sass-cache/
+
+*.zip
+
+tucao/
+
+blog/
+demos/
+lib/
+frame/
