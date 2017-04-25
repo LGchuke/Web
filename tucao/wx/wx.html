@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style type="text/css">
+    #img1 {
+      position: absolute;
+      top: -200px;
+      width: 320px;
+      height: 568px;
+      /*background-position: 20% 0%;*/
+      /*background-position: 20% 0%;*/
+    }
+
+    #img2 {
+      position: absolute;
+      left: 320px;
+    }
+
+    .blur {
+      position: absolute;
+      background: #333;
+      height: 38px;
+      filter: blur(4px);
+      z-index: 9999;
+    }
+
+    #x1 {
+      top: -10px;
+      left: 66px;
+      width: 200px;
+      height: 30px;
+    }
+
+    #x2 {
+      position: absolute;
+      top: 160px;
+      width: 95px;
+      height: 40px;
+      border: solid 2px #f00;
+    }
+    #x4 {
+      position: absolute;
+      top: 42px;
+      left: 48px;
+      width: 55px;
+      height: 40px;
+      border: solid 2px #f00;
+    }
+
+
+    #x3 {
+      position: absolute;
+      left: 600px;
+      color: #f00;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+    }
+    #x5 > div,
+    #x3 > div {
+      font-size: 26px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
+    #x5 {
+      position: absolute;
+      left: 320px;
+      color: #f00;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="img1" src="./wx.png">
+  <img id="img2" src="./laima.gif">
+
+  <!-- div.blur#x$*3 -->
+  <div class="blur" id="x1"></div>
+  <div id="x2"></div>
+  <div id="x4"></div>
+
+  <div id="x3">
+    <div>还</div>
+    <div>让</div>
+    <div>不</div>
+    <div>让</div>
+    <div>人</div>
+    <div>好</div>
+    <div>好</div>
+    <div>玩</div>
+    <div>微</div>
+    <div>信</div>
+    <div>！</div>
+  </div>
+  <div id="x5">
+    <div>把</div>
+    <div>表</div>
+    <div>情</div>
+    <div>整</div>
+    <div>这</div>
+    <div>么</div>
+    <div>丑</div>
+    <div>！</div>
+  </div>
+</body>
+</html>
