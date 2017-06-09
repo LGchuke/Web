@@ -1,0 +1,119 @@
+section {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+article {
+  height: 300px;
+  /*伸缩项目该占用的剩余空间比例：1/3*/
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: 1px solid black;
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  transition: 1s all;
+}
+
+article:hover {
+  /*伸缩项目该占用的剩余空间比例：2/3*/
+  -webkit-flex: 2;
+  -moz-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+body {
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+article {
+  -webkit-flex: 1 0;
+  -moz-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  transition: 1s all;
+  overflow: hidden;
+  height: 550px;
+  color: rgba(0,0,0,1);
+}
+
+article:hover {
+  -webkit-flex: 1 600px;
+  -moz-flex: 1 600px;
+  -ms-flex: 1 600px;
+  flex: 1 600px;
+  color: rgba(0,0,0,1);
+}
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 3.2rem;
+  display: none;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+body {
+
+  margin: 0 auto;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}
+
+article {
+      -webkit-flex: 1 0;
+      -moz-flex: 1 0;
+  flex: 1 0;
+
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: rgba(0,0,0,0);
+
+  background: -webkit-linear-gradient(top left,rgba(0,0,0,0),rgba(0,0,0,0.4));
+  background: -moz-linear-gradient(top left,rgba(0,0,0,0),rgba(0,0,0,0.4));
+  background: -ms-linear-gradient(top left,rgba(0,0,0,0),rgba(0,0,0,0.4));
+  background: linear-gradient(to bottom right,rgba(0,0,0,0),rgba(0,0,0,0.4));
+
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
+
+  overflow: hidden;
+  height: 550px;
+}
+
+    article:hover {
+  -webkit-flex: 1 600px;
+  -moz-flex: 1 600px;
+  flex: 1 600px;
+
+  color: rgba(0,0,0,1);
+}
+
+article:nth-child(2n) {
+  background-color: #f00;
+}
+
+article:nth-child(2n+1) {
+  background-color: #aaf;
+}
