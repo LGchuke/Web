@@ -74,6 +74,35 @@
         background: #fcc;
         overflow: hidden;
     }
+    a {
+      position: relative;
+      display: inline-block;
+      outline: none;
+      text-decoration: none;
+      color: #000;
+      font-size: 32px;
+      padding: 5px 10px;
+      transition: 0.6s ease-in-out;
+    }
+
+    a::before {
+      position: absolute;
+      left: 0;
+      content: "\5B";
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    a::after {
+      position: absolute;
+      right: 0;
+      content: "\5D";
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    a:hover::before, a:hover::after { opacity: 1 }
+    a:hover::before {  left: -20px; }
+    a:hover::after {  right:  -20px; }
   </style>
 
   <div class="aside"></div>
@@ -82,5 +111,7 @@
     <h1 class="h10001">XXXxxx测试内容</h1>
     <h1 class="h10002">XXXxxx测试内容</h1>
   </div>
+  <a href="#">WAFTURE</a>
+  <a href="#">SUMPTUOUS</a>
 </body>
 </html>
