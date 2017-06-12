@@ -1,0 +1,109 @@
+#block {
+  z-index: 4;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.wrap {
+  position: relative;
+}
+
+.flow-block {
+  /*display: */
+  float: left;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* 问: 为何得紧挨一起？ 不然就无效 */
+#b1.switch {
+  animation: an1 8s 0.1s infinite ease-out;
+}
+
+/* 对于方块可能有抖动会比较好，但是对于文字，没好处 */
+@keyframes an1 {
+  0%, 25% {
+    transform: scale3d(2, 1, 1) translateX(-30px);
+    opacity: 0;
+  }
+  45%, 80% {
+    transform: none;
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    transform: scale(0);
+    /*transform: rotate3d(1, 0, 0, 540deg);*/
+  }
+}
+
+@keyframes an1-planA {
+  0%, 25% {
+    transform: scale3d(2, 1, 1) translateX(-30px);
+    opacity: 0;
+  }
+  35%, 37% {
+    transform: scale3d(1, 1, 1);
+  }
+  37%, 39% {
+    transform: scale3d(1.15, 1, 1);
+  }
+  39%, 41% {
+    transform: scale3d(0.95, 1, 1);
+  }
+  41%, 42% {
+    transform: scale3d(1.08, 1, 1);
+  }
+  43%, 44.5% {
+    transform: scale3d(1, 1, 1);
+  }
+  45%, 80% {
+    transform: none;
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    transform: scale(0);
+    /*transform: rotate3d(1, 0, 0, 540deg);*/
+  }
+}
+
+@keyframes an1-planB {
+  0%, 25% {
+    transform: scale3d(2, 1, 1) translateX(-30px);
+    opacity: 0;
+  }
+  35%, 37% {
+    transform: scale3d(1, 1, 1);
+  }
+  37%, 39% {
+    transform: scale3d(1.15, 1, 1);
+  }
+  39%, 41% {
+    transform: scale3d(0.95, 1, 1);
+  }
+  41%, 42% {
+    transform: scale3d(1.07, 1, 1);
+  }
+  42%, 46% {
+    transform: scale3d(0.96, 1, 1);
+  }
+  46%, 48.5% {
+    transform: scale3d(1, 1, 1);
+  }
+  50%, 80% {
+    transform: none;
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    transform: scale(0);
+    /*transform: rotate3d(1, 0, 0, 540deg);*/
+  }
+}
