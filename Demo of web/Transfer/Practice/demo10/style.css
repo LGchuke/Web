@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.et-content-wrap {
+  margin: 0 auto;
+  width: 1080px;
+  border: 1px solid #f3f;
+  padding: 2px;
+}
+
+.et-music-tab-list {
+  position: relative;
+  display: flex;
+  border: 1px solid #f33;
+}
+
+.et-music-tab-list:after {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  content: '';
+  width: 60px;
+  border-bottom: 2px solid #333;
+  transition: 0.36s ease-in-out;
+}
+
+.et-content-wrap.trick1 .et-music-tab-list:after {
+  left: 90px;
+}
+
+.et-content-wrap.trick2 .et-music-tab-list:after {
+  left: 170px;
+}
+
+.et-content-wrap.trick3 .et-music-tab-list:after {
+  left: 250px;
+}
+
+.et-music-tab {
+  margin: 0;
+  width: 80px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+
+/*.et-music-box-group {
+  display: none;
+}*/
+
+/*.et-music-box-group:first-child {
+  display: block;
+  background: #000;
+}*/
+
+.et-music-box-group .et-music-box {
+  display: none;
+}
+
+.et-music-box-group:nth-child(4n+1) .et-music-box {
+  display: flex;
+}
+
+.et-music-box-group:nth-child(4n+1) .et-music-box > .et-music-item {
+  border: 4px solid #3a3;
+}
+
+.et-music-box-group:nth-child(4n+2) .et-music-box > .et-music-item {
+  border: 4px solid #963;
+}
+
+.et-music-box-group:nth-child(4n+3) .et-music-box > .et-music-item {
+  border: 4px solid #fa3;
+}
+
+.et-music-box-group:nth-child(4n) .et-music-box > .et-music-item {
+  border: 4px solid #6af;
+}
+
+.et-music-box {
+  margin-top: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  border: 1px solid #333;
+}
+.et-music-box:last-child {
+  margin-bottom: 12px;
+}
+
+.et-music-item {
+  width: 180px;
+  height: 180px;
+  /*border: 1px solid #3a3;*/
+}
+
+
+
+
+
+
+
+
+header {
+  width: 100%;
+  height: 54px;
+  background: #333;
+}
+
+header > p,
+footer > p {
+  margin: 0;
+  padding: 0;
+  padding-left: 130px;
+  width: 100px;
+  height: 54px;
+  line-height: 54px;
+  font-size: 24px;
+  color: #eee;
+}
+
+footer {
+  width: 100%;
+  height: 54px;
+  background: #333;
+}
