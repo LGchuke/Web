@@ -3,6 +3,17 @@ var ca = document.getElementById('canvas');
 if(ca.getContext) {
   var cot = ca.getContext('2d');
 
+  if (window.devicePixelRatio) {
+    var hW = ca.width;
+    var hH = ca.height;
+
+    ca.width = hW * window.devicePixelRatio;
+    ca.height = hH * window.devicePixelRatio;
+    ca.style.width = hW;
+    ca.style.height = hH;
+    cot.scale(window.devicePixelRatio, window.devicePixelRatio);
+  }
+
   cot.beginPath();
 
   var x = 300,
@@ -55,5 +66,7 @@ if(ca.getContext) {
   //     }, delay * i);
   //   }
   // });
+  // the third way
+
   tx();
 }
