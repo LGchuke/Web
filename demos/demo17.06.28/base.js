@@ -6,6 +6,16 @@ var ol
 var li = null
 var tmp = document.getElementById('tmp')
 
+var btnGenerator = function(files, i) {
+  var btn = document.createElement('button')
+  btn.textContent = 'remove'
+  btn.addEventListener('click', () => {
+    console.log(files[i])
+    console.log(i)
+  })
+  return btn
+}
+
 f.addEventListener('change', () => {
   // console.log(f[0].files)
   tmp.innerHTML = ''
@@ -15,6 +25,7 @@ f.addEventListener('change', () => {
     console.log(f.files[i])
     li = document.createElement('li')
     li.appendChild(document.createTextNode(f.files[i].name))
+    li.appendChild(btnGenerator(f.files, i))
     ol.appendChild(li)
   }
   fragment.appendChild(ol)
