@@ -1,0 +1,14 @@
+body {
+  margin: 40px;
+}
+.tab {
+  background: #eee;
+}
+
+/*.tab:last-child {
+  background: #333;
+}*/
+
+.tab:last-of-type {
+  background: #333;
+}
