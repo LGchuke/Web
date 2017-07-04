@@ -2,8 +2,8 @@ var contentWrap = document.querySelector('.et-content-wrap')
 
 var tabs = document.querySelectorAll('.et-music-tab')
 
-var delay = 320;
-var delayDelta = 10;
+var delay = 310;
+var delayDelta = 20;
 
 var bindClick = function(i) {
   tabs[i].addEventListener('click', function(e) {
