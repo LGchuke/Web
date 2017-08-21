@@ -2,6 +2,9 @@
 #g00 {
     display: flex;
     flex-direction: row;
+    &:after {
+        content: 'align-items: flex-start;';
+    }
 }
 
 #g001 {
@@ -29,6 +32,9 @@
 #g01 {
     display: flex;
     flex-direction: row;
+    &:after {
+        content: 'align-items: center;';
+    }
 }
 
 #g011,
@@ -57,4 +63,21 @@
 
 #g015 {
     justify-content: space-around;
+}
+
+// g02
+#g02 {
+    display: flex;
+    flex-direction: row;
+    &:after {
+        content: 'align-items: flex-end;';
+    }
+}
+
+#g021,
+#g022,
+#g023,
+#g024,
+#g025 {
+    align-items: flex-end;
 }

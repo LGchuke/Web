@@ -26,6 +26,13 @@ body.scale {
     width: 100%;
     max-width: 1140px;
     border: 1px dashed #f82;
+    &:after {
+        margin: 12px;
+        width: 20%;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+    }
 }
 
 $boxSize: 150px;
