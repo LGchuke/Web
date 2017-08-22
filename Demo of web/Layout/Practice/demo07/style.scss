@@ -1,0 +1,74 @@
+.row {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px dashed #D03032;
+    box-sizing: border-box;
+}
+
+.item {
+    height: 120px;
+    border: 1px dashed #308CD0;
+    box-sizing: border-box;
+}
+
+// 浮动布局 + 百分比
+#box1 {
+    .row {
+        width: 100%;
+        overflow: hidden;
+        zoom: 1;
+    }
+
+    .item {
+        float: left;
+        width: 20%;
+    }
+}
+
+// 行内元素（inline-block）+ 百分比
+#box2 {
+    .row {
+        width: 100%;
+        font-size: 0;
+        word-spacing: -20px;
+    }
+
+    .item {
+        display: inline-block;
+        // display: inline;
+        width: 20%;
+        zoom: 1;
+        vertical-align: top;
+        word-spacing: normal;
+        letter-spacing: normal;
+    }
+}
+
+// display:table + display:table-cell
+#box3 {
+    .row {
+        width:100%;
+        display: table;
+    }
+
+    .item {
+        display: table-cell;        
+    }
+}
+
+// css3 display:flex
+#box4 {
+    .row {
+        width: 100%;
+        display: box; /* OLD 2009版 - Android 4.4- */
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - chrome21+ Opera 12.1, Firefox 20+ */
+    }
+
+    .item {
+        -webkit-box-flex: 1;    /* OLD - iOS 6-, Safari 3.1-6 */
+        -webkit-flex: 1;        /* Chrome */
+        flex: 1; 
+    }
+}
