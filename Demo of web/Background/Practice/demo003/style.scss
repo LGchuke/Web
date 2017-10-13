@@ -1,0 +1,36 @@
+// save some bytes by getting rid of blurry bg images
+// and make your own w/ css gradients.
+
+:root {
+  background-color: #2980b9;
+  background: linear-gradient(215deg, #71b073 29.9%, #2776aa 80%), linear-gradient(304deg, rgba(255, 101, 53, 0.4) 24.9%, #aa2743 91%), linear-gradient(10deg, #b1c9d8 19.9%, #2776aa 50%), linear-gradient(145deg, #f4df26 15.9%, #ff1b9a 40%);
+  background-repeat: no-repeat;
+
+  // alt style
+  // background: linear-gradient(215deg, #71b073 29.9%, #38b1ff 120%), linear-gradient(304deg, rgba(255, 101, 53, 0.4) 24.9%, #aa2743 91%), linear-gradient(-5deg, #b1c9d8 -10.1%, #2776aa 50%), linear-gradient(145deg, rgba(244, 223, 38, .3) 8.9%, #ff1b9a 60%);
+
+  // blend mode
+  background-blend-mode: hard-light;
+}
+
+
+// for demo
+
+:root {
+  font-size: calc( 1rem + (60 - 30) * ( (100vw - 400px) / ( 2000 - 400)));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+body {
+  color: rgba(white, .2);
+  flex-grow: 1;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 2em;
+  text-align: center;
+}
+
+h1 { color: #fff; text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95; letter-spacing: 5px; font: 80px 'MisoRegular'; }
+/*h1 { text-shadow: 0px 0px 10px rgba(255,255,255,0.6), 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 50px rgba(255,255,255,0.3), 0px 0px 180px rgba(255,255,255,0.3); color: rgba(255,255,255,0); font: 80px; }*/
