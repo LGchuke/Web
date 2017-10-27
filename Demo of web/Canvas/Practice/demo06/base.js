@@ -11,13 +11,30 @@ var ca = document.getElementById('canvas');
 if(ca.getContext) {
   var cot = ca.getContext('2d');
 
+  if (window.devicePixelRatio) {
+    var hW = ca.width;
+    var hH = ca.height;
+
+    ca.width = hW * window.devicePixelRatio;
+    ca.height = hH * window.devicePixelRatio;
+    ca.style.width = hW;
+    ca.style.height = hH;
+    cot.scale(window.devicePixelRatio, window.devicePixelRatio);
+    console.log('hehre');
+  }
+
   cot.beginPath();
 
-  cot.arc(x, y, 99, 0, 2 * Math.PI, false);
+  cot.arc(600, 600, 99, 0, 2 * Math.PI, false);
+  cot.stroke();
+  cot.arc(600, 600, 80, 0, 2 * Math.PI, false);
+  cot.stroke();
+  cot.fillStyle = '#38d';
 
   cot.closePath();
+  // cot.fill();
 
-  cot.beginPath();
+  // cot.beginPath();
 
   var x = 300,
       y = 300,
@@ -46,8 +63,8 @@ if(ca.getContext) {
     cot.arc(x, y, 99, 2 * Math.PI * (i / splitCount), 2 * Math.PI * ((i+1) / splitCount), false);
     i = i + 1;
     cot.stroke();
-    cot.closePath();
-    cot.fill();
+    // cot.closePath();
+    // cot.fill();
 
 
     console.log(i);

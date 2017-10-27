@@ -1,6 +1,6 @@
 var iCount = 36;
 var deg = 360 / parseFloat(iCount);
-var delay = 80;
+var delay = 1000 / 60.0;
 
 var etUl = document.querySelector('.et-wrap ul');
 var fragment = document.createDocumentFragment();
@@ -25,14 +25,14 @@ function a(e, i) {
   e.classList.toggle('switch');
   setTimeout(() => {
     e.style.transform = 'rotate(' + deg * i + 'deg)';
-  }, 100 * i++);
+  }, delay * i++);
 }
 
 function b(e, i) {
   e.classList.toggle('switch');
   setTimeout(() => {
     e.style.transform = 'rotate(0deg)';
-  }, 100 * i++);
+  }, delay * i++);
 }
 
 var tx = (function() {

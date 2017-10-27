@@ -11,6 +11,27 @@ function fn() {
   var canvas2 = document.createElement('canvas'), ctx2 = canvas2.getContext('2d');
   canvas2.width = 100;
   canvas2.height = 100;
+
+  // if (window.devicePixelRatio) {
+  //   var hW = canvas.width;
+  //   var hH = canvas.height;
+
+  //   canvas.width = hW * window.devicePixelRatio;
+  //   canvas.height = hH * window.devicePixelRatio;
+  //   canvas.style.width = hW;
+  //   canvas.style.height = hH;
+  //   ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+  //   var hW2 = canvas2.width;
+  //   var hH2 = canvas2.height;
+
+  //   canvas2.width = hW2 * window.devicePixelRatio;
+  //   canvas2.height = hH2 * window.devicePixelRatio;
+  //   canvas2.style.width = hW2;
+  //   canvas2.style.height = hH2;
+  //   ctx2.scale(window.devicePixelRatio, window.devicePixelRatio);
+  // }
+
   var half = canvas2.width / 2, gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
   gradient2.addColorStop(0.025, '#fff');
   gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
