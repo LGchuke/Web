@@ -14,13 +14,17 @@
 
 # SASS
 .sass-cache/
+*.css.map
 
 *.zip
 
-tucao/
+
 
 blog/
-demos/
-lib/
+# frames like bootstrap、amazeui...
 frame/
-# draft/
+goods/
+history/
+# libs like jquery.js, Three.js, react.min.js, etc...
+lib/
+tucao/
