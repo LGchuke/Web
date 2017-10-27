@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+#app {
+  position: relative;
+  display: block;
+  height: 600px;
+  border: 1px solid #cccfff;
+}
+
+
+#ball {
+  position: absolute;
+  left: 48%;
+  top: 500px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #34538b;
+  background-image: radial-gradient(100px 100px at 50px 20px, #a0b3d6, #34538b);
+  cursor: move;
+  z-index: 1;
+}
+
+shadow {
+  position: absolute;
+  left: 48%;
+  bottom: -10px;
+  width: 100px;
+  height: 30px;
+  /*background-image: -webkit-radial-gradient(ellipse closest-side, rgba(0,0,0,.75), rgba(0,0,0,0));*/
+  /*background-image: -moz-radial-gradient(ellipse closest-side, rgba(0,0,0,.75), rgba(0,0,0,0));*/
+  background-image: radial-gradient(ellipse closest-side, rgba(0,0,0,.75), rgba(0,0,0,0));
+}
