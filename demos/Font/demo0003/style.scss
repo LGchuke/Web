@@ -1,0 +1,64 @@
+.wrap {
+  position: relative;
+  width: 1000px;
+  height: 50px;
+}
+
+.th-caption-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.th-caption-div p {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  // transition: all 8s linear 0s;
+}
+
+.th-caption-pre {
+  width: 1000px;
+  line-height: 50px;
+  height: 50px;
+  background: #fff;
+  /*color: transparent;*/
+  transition: 1.4s ease-out;
+}
+
+.th-caption {
+  width: 1000px;
+  line-height: 50px;
+  height: 50px;
+  background:-webkit-gradient(linear, left 0 , right 0, from(#428bfa), to(#f12));
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: 1.0s ease-out;
+}
+
+
+.switch {
+  transform: translateX(1000px);
+}
+
+
+
+
+@-webkit-keyframes gradual {
+  0% {
+  }
+
+  100% {
+  }
+}
+
+
+
+
+
+
+
+
