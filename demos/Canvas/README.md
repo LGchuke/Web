@@ -1,14 +1,16 @@
-### 关于 Canvas
+# Canvas
 
 
 
 
-### List
-* demo08 -- [Cutout Mask Polygons on Canvas](https://codepen.io/shshaw/pen/PPEMYX) 
+## List
+* demo0008 -- [Cutout Mask Polygons on Canvas](https://codepen.io/shshaw/pen/PPEMYX)
+* demo0009 -- Sky
 
 
 
 
+## Notes
 * 使 Canvas 画布支持高分屏（High DPI）的万金油代码
 
 ```javascript
