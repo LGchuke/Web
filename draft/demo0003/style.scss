@@ -1,0 +1,38 @@
+$count: 100;
+
+body {
+  background: #171720;
+}
+
+@for $i from 1 to $count {
+  .line:nth-child(#{$i}) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate($i*-3.7deg);
+
+    &::before {
+      content: "";
+      width: 180px;
+      height: 180px;
+      border: 1px solid lightblue;
+      border-style: inset dashed;
+      position: absolute;
+      animation: star 6s linear infinite;
+      animation-delay: $i*-.5s;
+      transform-origin: 0 0;
+    }
+  }
+}
+
+@keyframes star{
+  0% {
+    transform: scale(1) translateX(-100px);
+  }
+  50% {
+    transform: scale(1.2) translateX(-100px);
+  }
+  100% {
+    transform: scale(1) translateX(-100px);
+  }
+}
