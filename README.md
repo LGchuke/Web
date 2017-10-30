@@ -6,7 +6,7 @@ demo、material、etc...
 
 
 ## Content List
-* Demo\ of\ web -- Start with a bad name, it has been a historical problem, and I will fix it later
+* demos -- Different kinds of web demos 
 * draft -- Like a web playground, for single demo, no matter care about what it's name should be or which type it belongs
 * frame -- Frames like Bootstrap, AmazeUI, etc... And it should be ignored
 * goods -- Goods, and it should be ignored

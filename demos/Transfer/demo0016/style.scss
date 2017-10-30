@@ -1,0 +1,47 @@
+$neon: #5cccef; //#ff2d95
+
+body {
+  background: #000;
+}
+#ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(215deg, #6df971 29.9%, #2776aa 80%),
+              linear-gradient(304deg, rgba(255, 101, 53, 0.4) 24.9%, #aa2743 91%),
+              linear-gradient(10deg, #b1c9d8 19.9%, #2776aa 50%);
+              /*linear-gradient(145deg, #f4df26 15.9%, #ff1b9a 40%);*/
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $neon, 0 0 30px $neon, 0 0 40px $neon, 0 0 50px $neon, 0 0 75px $neon;
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  transition: all 0.5s ease-in-out;
+  animation: pulse 2s ease-in-out infinite, shadowNeon 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #6df971;
+  }
+  50% {
+    background-color: $neon;
+  }
+  100% {
+    background-color: #6df971;
+  }
+}
+
+@keyframes shadowNeon {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px $neon, 0 0 70px $neon, 0 0 80px $neon, 0 0 100px $neon, 0 0 150px $neon;
+  }
+  50% {
+    box-shadow: 0 0 5px $neon, 0 0 10px $neon, 0 0 15px #fff, 0 0 20px $neon, 0 0 30px $neon, 0 0 40px $neon, 0 0 50px $neon, 0 0 75px $neon;
+  }
+  100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px $neon, 0 0 70px $neon, 0 0 80px $neon, 0 0 100px $neon, 0 0 150px $neon;
+  }
+}
