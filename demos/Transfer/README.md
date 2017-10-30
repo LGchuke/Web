@@ -12,3 +12,4 @@
 * demo0014 -- [Applying a CSS and SVG mask](https://codepen.io/iamvdo/pen/wFrAq)
 * demo0015 -- [SVG mask + animated gradient](https://codepen.io/SahAssar/pen/ZYOJOM)
 * demo0016 -- A light ball(semi-finished)
+* demo0017 -- [Magic beans](https://codepen.io/scorch/pen/zdKErE)
