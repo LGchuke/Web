@@ -7,3 +7,4 @@
 * demo0001 -- Tween & Ball 拖动小球，测试各种 easeIn, easeOut, easeInOut 效果
 * demo0002 -- [Mix-blend-mode: screen](https://codepen.io/Chokcoco/pen/zwPyWj)
 * demo0003 -- [Line graph](https://codepen.io/careecodes/pen/ZBPJZW)
+* demo0004 -- Getting started with Three.js
