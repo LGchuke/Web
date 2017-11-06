@@ -27,7 +27,7 @@ goods/
 history/
 # libs like jquery.js, Three.js, react.min.js, etc...
 lib/
-# like img, color, etc...
-resource/
+# like img, fonts, color, etc...
+res/
 tucao/
 

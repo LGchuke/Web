@@ -8,3 +8,4 @@
 * demo0002 -- [Mix-blend-mode: screen](https://codepen.io/Chokcoco/pen/zwPyWj)
 * demo0003 -- [Line graph](https://codepen.io/careecodes/pen/ZBPJZW)
 * demo0004 -- Getting started with Three.js
+* demo0005 -- Icon effect groups
