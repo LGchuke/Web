@@ -8,6 +8,7 @@
 * demo0009 -- Sky
 * demo0010 -- [Whirl2](https://codepen.io/scorch/pen/BZjbmW)
 * demo0011 -- [HEX tunnel with deformed sphere](https://codepen.io/Zultan/pen/EwXNov)
+* demo0012 -- [Animated Line Fractals](https://codepen.io/Thibka/pen/borRNN)
 
 
 
