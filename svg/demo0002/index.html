@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG demo0002 -- SVG Basic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <div class="item" data-msg="test01">
+      <svg>
+        <path d="M10 10 L75 10 L75 75 Z" />
+        <path fill="transparent" stroke="#000000" stroke-width="5" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+      </svg>
+    </div>
+
+    <div class="item" data-msg="test02">
+      <svg>
+        <path fill="transparent" stroke="#000000" stroke-width="5" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+      </svg>
+    </div>
+
+    <div class="item" data-msg="test03">
+      <svg id="t03">
+        <path fill="transparent" stroke="#000" stroke-width="5" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path">
+        </path>
+      </svg>
+    </div>
+
+    <div class="item" data-msg="test04">
+      <svg id="t04">
+        <path fill="transparent" stroke="#000" stroke-width="5" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path">
+        </path>
+        <path fill="transparent" stroke="#FF2851" stroke-width="5" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="line1">
+        </path>
+        <path fill="transparent" stroke="#3399f3" stroke-width="5" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="line2">
+        </path>
+      </svg>
+    </div>
+
+    <div class="item" data-msg="test05">
+      <svg id="t05">
+        <path fill="transparent" stroke="#888" stroke-width="2" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+      </svg>
+      <div class="ball"></div>
+    </div>
+  </div>
+</body>
+</html>

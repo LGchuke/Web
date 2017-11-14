@@ -1,0 +1,102 @@
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  position: relative;
+  max-width: 500px;
+  min-height: 200px;
+  &:hover {
+    &:after {
+      content: attr(data-msg);
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      z-index: 9999;
+      color: #fff;
+      text-shadow: 0px 0px 2px #000, 0px 0px 5px #333, 2px 2px 10px #666;
+      font-size: 18px;
+    }
+  }
+}
+
+#t03 {
+  width: 300px;
+  .path {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 0;
+    // animation: dash 2s ease-in;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 320;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+#t04 {
+  position: absolute;
+  display: block;
+
+  .line1 {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 280 - 100;
+    // animation: dash041 1.5s linear alternate infinite;
+  }
+  .line2 {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 360 - 100;
+    // animation: dash042 1.5s linear alternate infinite;
+  }
+}
+
+@keyframes dash041 {
+  from {
+    stroke-dashoffset: 280;
+  }
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+@keyframes dash042 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 40;
+  }
+}
+
+#t05 {
+  position: absolute;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+
+  offset-path: path('M10 80 Q 77.5 10, 145 80 T 280 80');
+  offset-distance: 33%;
+
+  // animation: red-ball 2s linear alternate infinite paused;
+}
+
+@keyframes red-ball {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
