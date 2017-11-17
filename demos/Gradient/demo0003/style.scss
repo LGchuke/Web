@@ -1,0 +1,19 @@
+body {
+  background: #333;
+}
+
+#et {
+  // --color-stop: deeppink;
+  margin: 50px auto;
+  margin-top: 200px;
+  width: 256px;
+  height: 256px;
+  border-radius: 10px;
+  // background: linear-gradient(white, var(--color-stop));
+  background: linear-gradient(white, #000);
+  transition: --color-stop .36s;
+}
+#et:hover {
+  // --color-stop: deepskyblue;
+  background: linear-gradient(white, #0f0);
+}
