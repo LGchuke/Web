@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 20px;
+}
+
+.parent {
+  width: 50%;
+  display: inline-block;
+  padding: .5em;
+}
+
+.parent.perspective {
+  perspective: 50em;
+}
+
+.child {
+  margin: .5em;
+  width: 3em;
+  height: 3em;
+  background: tomato;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.5);
+}
+
+.parent.perspective .child {
+  transform: rotateX(50deg);
+  background: tomato;
+}
+
+.parent.transform .child {
+  transform: perspective(50em) rotateX(50deg);
+  background: deepskyblue;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+
+// part2
+.wrapper {
+  width: 50%;
+  float: left;
+}
+
+.w1 {
+  perspective: 1000px;
+}
+
+.w2 {
+  perspective: 250px;
+}
+
+.wrapper h1 {
+  text-align: center;
+}
+
+.cube {
+  font-size: 4em;
+  width: 2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-40deg) rotateY(32deg);
+}
+
+.side {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+
+  background: rgba(tomato, .6);
+  border: 1px solid rgba(0,0,0,.5);
+
+  color: white;
+  text-align: center;
+  line-height: 2em;
+}
+
+.front  { transform:                  translateZ(1em); }
+.top    { transform: rotateX( 90deg)  translateZ(1em); }
+.right  { transform: rotateY( 90deg)  translateZ(1em); }
+.left   { transform: rotateY(-90deg)  translateZ(1em); }
+.bottom { transform: rotateX(-90deg)  translateZ(1em); }
+.back   { transform: rotateY(-180deg) translateZ(1em); }
+
+
+$panelSize: 200px;
+$btnSize: 40px;
+$borderSize: 2px;
+#ctrl-panel {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: $panelSize;
+  height: $panelSize;
+  border: $borderSize solid #333;
+  z-index: 999;
+  background: rgba(0, 0, 0, .18);
+  box-sizing: border-box;
+  transition: .36s ease-in-out;
+  &.closed {
+    right: -$panelSize;
+  }
+
+  #toggle {
+    position: absolute;
+    width: $btnSize;
+    height: $btnSize - 6;
+    border: $borderSize solid #333;
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    top: -$borderSize;
+    left: -($btnSize);
+    box-sizing: inherit;
+    outline: none;
+  }
+
+  ul {
+    li {
+      line-height: 27px;
+      input {
+        line-height: 12px;
+        margin: 0 8px 0 2px;
+        width: 40px;
+        border-style: dashed;
+        outline: none;
+      }
+      button {
+        margin-right: 8px;
+        border: 2px dotted #000;
+        border-radius: 0px;
+        line-height: 12px;
+        outline: none;
+      }
+    }
+  }
+}

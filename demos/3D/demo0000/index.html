@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D demo0000 -- 3D basic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="ctrl-panel">
+    <button id="toggle">Toggle</button>
+    <ul>
+      <li>w1: </li>
+      <li><input id="w1i" type="text" name="w1"><button id="w1p">+</button><button id="w1m">-</button></li>
+      <li>w2: </li>
+      <li><input id="w2i" type="text" name="w2"><button id="w2p">+</button><button id="w2m">-</button></li>
+    </ul>
+  </div>
+
+  <div>
+    <div class="parent perspective">
+      <h1>Using perspective property on parent</h1>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <div class="parent transform" style="float: right;">
+      <h1>Using transform: perspective() on children</h1>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </div>
+
+  <div id="w1" class="wrapper w1">
+    <h1><code>perspective: <span id="w1v">1000px</span></code></h1>
+    <div class="cube">
+      <div class="side  front">1</div>
+      <div class="side   back">6</div>
+      <div class="side  right">4</div>
+      <div class="side   left">3</div>
+      <div class="side    top">5</div>
+      <div class="side bottom">2</div>
+    </div>
+  </div>
+
+  <div id="w2" class="wrapper w2">
+    <h1><code>perspective: <span id="w2v">250px</span></code></h1>
+    <div class="cube">
+      <div class="side  front">1</div>
+      <div class="side   back">6</div>
+      <div class="side  right">4</div>
+      <div class="side   left">3</div>
+      <div class="side    top">5</div>
+      <div class="side bottom">2</div>
+    </div>
+  </div>
+
+  <script src="base.js" type="text/javascript"></script>
+</body>
+</html>
