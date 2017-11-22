@@ -1,0 +1,102 @@
+$bgColor: #fff;
+
+body {
+  margin: 0;
+  background: $bgColor;
+}
+
+$borderRadius: 6px;
+header {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 60vw;
+  height: 8vw;
+  border: 4px solid #f1c375;
+  border-radius: $borderRadius;
+  &:before {
+    content: '<HEADER>';
+    position: absolute;
+    top: -16px;
+    left: 12px;
+    width: 92px;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    background: $bgColor;
+    font-weight: 800;
+  }
+  nav {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 60%;
+    border: 4px solid #f1c375;
+    border-radius: $borderRadius;
+    .item {
+      margin: 0 auto;
+      margin-top: 15px;
+      width: 20%;
+      height: 60%;
+      vertical-align: middle;
+      background: #fcf3e4;
+    }
+    #nav-title {
+      position: relative;
+      top: 24px;
+      width: 92px;
+      height: 27px;
+      line-height: 27px;
+      // text-align: center;
+      &:before {
+        content: '<NAV>';
+        position: absolute;
+        // left: 12px;
+        width: 92px;
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        background: $bgColor;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+.th-icon-maker {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+}
+
+#icon-01 {
+  top: 200px;
+  left: 200px;
+  border: 1px solid #000;
+  background-image: url(../img/icon-star.png);
+  background-size: 64px 64px;
+}
+
+#adjust {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 36px;
+  background: #fff;
+  border-color: #000;
+  border-radius: 6px;
+  color: #000;
+  outline: none;
+  transition: all 0.5s ease-out 0s;
+  z-index: 100;
+  &:hover {
+    box-shadow: 0px 0px 2px 3px #222;
+    // box-shadow: 0px 0px 0px 3px #F00, 0px 0px 0px 6px #0F0, 0px 0px 0px 9px #00F, 0px 0px 0px 12px #FF0, 0px 0px 0px 15px #0FF;
+  }
+}
+
+
