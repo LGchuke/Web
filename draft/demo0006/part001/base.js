@@ -7,7 +7,7 @@ var imageFromPath = (path) => {
 }
 
 var Paddle = () => {
-  var image = imageFromPath('./img/02.png')
+  var image = imageFromPath('../img/paddle.png')
   var o = {
     image: image,
     speed: 5,
@@ -39,16 +39,16 @@ var Paddle = () => {
 }
 
 var Ball = () => {
-  var image = imageFromPath('./img/ball.png')
+  var image = imageFromPath('../img/ball.png')
   var o = {
     image: image,
     x: 100,
     y: 100,
     speedX: 8,
     speedY: 8,
-    fired: true,
+    fired: false,
     fire() {
-
+      this.fired = !this.fired;
     },
     move() {
       if (this.fired) {
@@ -135,6 +135,13 @@ var __main = () => {
   var game = GuaGame()
   var paddle = Paddle()
   var ball = Ball()
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'f' || e.key === 'F') {
+      ball.fire()
+    }
+  });
+
 
   game.registerAction('a', () => {
     paddle.moveLeft()

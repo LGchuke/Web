@@ -13,4 +13,4 @@
 * demo0003 -- [Line graph](https://codepen.io/careecodes/pen/ZBPJZW)
 * demo0004 -- Getting started with Three.js
 * demo0005 -- Icon effect groups
-* demo0006 -- 直播编程写游戏 01
+* demo0006 -- 萧井陌 B 站录播代码合集
