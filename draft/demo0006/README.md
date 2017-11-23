@@ -25,3 +25,4 @@
 **List**
 
 * part001 -- [直播编程写游戏第一期](https://www.bilibili.com/video/av12138532/)
+* part002 -- [直播编程写游戏第二期](https://www.bilibili.com/video/av12168808/)
