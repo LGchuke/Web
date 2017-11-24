@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: #333;
+}
+
+.wrap {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 300px;
+  height: 200px;
+  background: #F0f;
+  z-index: 9999;
+}
+
+canvas {
+  background: #fff;
+  border: 1px solid orange;
+}
