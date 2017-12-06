@@ -14,3 +14,4 @@
 * demo0004 -- Getting started with Three.js
 * demo0005 -- Icon effect groups
 * demo0006 -- 萧井陌 B 站录播代码合集
+* demo0009 -- [Gameguide part of HeartStone Offical Homepage](http://hs.blizzard.cn/gameguide/)
