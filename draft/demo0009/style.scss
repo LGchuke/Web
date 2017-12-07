@@ -1,11 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e7d4a9 url('./img/bg.jpg') repeat-y center 0 fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#wrap {
+  position: relative;
+  height: 2275px;
+  background: url('./img/kobolds-bg.jpg') no-repeat 50% 0 fixed;
+}
+
+.card-features {
+  position: absolute;
+  top: -30px;
+  z-index: 0;
+  width: 1200px;
+  left: 50%;
+  margin-left: -600px;
+
+  li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -360px;
+  }
+}
+
+
+#header {
+  height: 275px;
+  position: relative;
+  width: 1024px;
+  left: 50%;
+  margin-left: -512px;
+  z-index: 900;
+  .logo {
+    position: absolute;
+    width: 350px;
+    height: 184px;
+    top: 32px;
+    left: 10px;
+    z-index: 9000;
+    background: url(http://hearthstone.nos.netease.com/3/common/hsLogo/home-v2016.png) no-repeat;
+  }
+}
+
+.wraperCon {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  background: url(./img/con-bg.png) repeat-y 50% 0;
+}
+
 // div wrap
 .wraperConArea {
   margin: 0 auto;
+  padding-top: 20px;
   width: 1024px;
+  min-height: 1000px;
   padding-bottom: 41px;
   position: relative;
   background: url(http://hearthstone.nos.netease.com/3/v2015/layout/con-bg-top.png) no-repeat 50% 0;
 }
+
 
 
 // ul
@@ -194,4 +256,17 @@
 .expansion-link__logo--naxx {
   margin-left: -40%;
   width: 82%;
+}
+
+
+
+// footer
+#footer {
+  background: url(./img/footerrepeat.jpg) repeat-x;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: auto;
+  height: 400px;
+  z-index: 3;
 }
