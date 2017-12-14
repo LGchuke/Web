@@ -6,6 +6,7 @@
 # img
 *.png
 *.jpg
+*.jpeg
 *.gif
 *.svg
 
