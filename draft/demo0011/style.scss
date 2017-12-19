@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-box: border-box;
+}
+
+body {
+  background: #000;
+}
+
+$lineHeight: 36.6px;
+$blockWidth: 60px;
+$blockMargin: 1px;
+
+.box {
+  width: 16 * ($blockWidth + $blockMargin) - $blockMargin;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.color-block-group {
+  display: flex;
+  margin-top: $blockMargin;
+  height: $lineHeight;
+}
+
+.color-block {
+  margin-right: $blockMargin;
+  width: $blockWidth;
+  height: $lineHeight;
+  &:last-child {
+    margin-right: 0;
+  }
+}
