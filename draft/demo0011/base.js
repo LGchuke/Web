@@ -13,7 +13,7 @@ for (let i = 0; i < 16; i++) {
   for (let j = 0; j < 16; j++) {
     let block = document.createElement('div')
     block.classList.add('color-block')
-    let colorValue = i * j
+    let colorValue = (i + 1) * (j + 1)
     block.style.background = createColor(colorValue)
     group.appendChild(block)
   }
