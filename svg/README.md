@@ -8,7 +8,7 @@ Learn & practice about SVG
 ## List
 * demo0001 -- [An animation of svg on codepen]()
 * demo0002 -- SVG Basic
-
+* demo0003 -- AFX in SEE Conf
 
 
 
