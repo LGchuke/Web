@@ -1,0 +1,40 @@
+#wrap {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border: 1px solid #000;
+}
+
+$pulseColor: #03a87c;
+
+#pulse {
+  content: 'Icon';
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  border-color: $pulseColor;
+  color: $pulseColor;
+  // fill: #03a87c;
+
+  &:hover {
+    animation: pulse-shadow--collection 2s infinite;
+  }
+}
+
+@keyframes pulse-shadow--collection {
+  0% {
+    box-shadow:0 0;
+  }
+  70% {
+    box-shadow: 0 0 5px 10px rgba(255,255,255,0);
+  }
+  100% {
+    box-shadow:0 0 0 0 rgba(255,255,255,0);
+  }
+}
