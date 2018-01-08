@@ -1,0 +1,62 @@
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  & > div {
+    padding: 1em;
+    color: #d9480f;
+    background: rgba(233, 171, 88, .5);
+    border: 2px solid #eaab58;
+    border-radius: 5px;
+  }
+  .one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+  }
+  .four {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 4;
+  }
+}
+
+$c1Color: #66afe9;
+$n: 12;
+$minRowHeight: (800px - 2 * 20px) / 12;
+
+#chessboard {
+  margin-top: 20px;
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat($n, 1fr);
+    grid-auto-rows: minmax($minRowHeight, auto);
+    grid-gap: 5px;
+    .row {
+      display: grid;
+      grid-column: 1 / 13;
+      grid-gap: 5px;
+      grid-template-columns: repeat($n, 1fr);
+      .item {
+        background: #fff;
+        border: 1px solid $c1Color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+      }
+    }
+  }
+}
