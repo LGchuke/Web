@@ -8,6 +8,16 @@ the way to use flex, grid...
 
 * demo0000 -- table & table-cell 参考了该文章[能使用html/css解决的问题就不要使用JS](https://zhuanlan.zhihu.com/p/26138999)
 * demo0001 -- Grid Layout Basic(It's enough, so easy)
+* demo0002 -- Grid Layout Use Case
+
+
+### display: grid
+
+看上起似乎复杂，实际上手非常快
+
+使用过程中遇到 padding 影响行高、垂直居中的问题，如 demo0002 中
+
+感觉这似乎是因为 grid 还没完善？
 
 
 ### display: flex
