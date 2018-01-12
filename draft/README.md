@@ -17,3 +17,4 @@
 * demo0009 -- [Gameguide part of HeartStone Offical Homepage](http://hs.blizzard.cn/gameguide/)
 * demo0011 -- Gray Scale Blocks
 * demo0014 -- Cube Runner
+* demo0015 -- Cube Runner v1.0
