@@ -1,6 +1,6 @@
 const log = console.log.bind(console)
 
-const cn = 3
+const cn = 4
 const train = document.querySelector('.train')
 const items = document.querySelectorAll('.item')
 
@@ -32,10 +32,14 @@ let x = 0
 let y = 0
 let d = 0
 let pos = [
-  {x: 0, y: 0},
-  {x: 0, y: 0},
-  {x: 0, y: 0}
+  // {x: 0, y: 0},
+  // {x: 0, y: 0},
+  // {x: 0, y: 0}
 ]
+
+for (let i = 0; i < cn; i++) {
+  pos.push({x: 0, y: 0})
+}
 
 const arr = []
 
@@ -113,4 +117,72 @@ window.addEventListener('keydown', e => {
   if ((e.key === 'b' || e.key === 'B') && e.metaKey) {
     init()
   }
+  if ((e.key === 'l' || e.key === 'L') && e.metaKey) {
+    alpha1()
+  }
 })
+
+
+/**
+ * 测试用无智能（随机）机器人
+ * unintelligent alphas
+ */
+const alpha0 = _ => {
+  let random
+  setInterval(_ => {
+    random = parseInt(Math.random() * 100 % 4)
+    switch (random) {
+      case 0:
+        x > 0 ? x-- : 0
+        break
+      case 1:
+        y > 0 ? y-- : 0
+        break
+      case 2:
+        x < 11 ? x++ : 11
+        break
+      case 3:
+        y < 11 ? y++ : 11
+        break
+    }
+    logD()
+    changePos(x, y, d)
+  }, 600)
+}
+
+const alpha1 = _ => {
+  for (let i = 0; i < 4; i++) {
+    x++
+    changePos(x, y, d)
+  }
+  for (let i = 0; i < 4; i++) {
+    y++
+    changePos(x, y, d)
+  }
+  let random
+  setInterval(_ => {
+    random = parseInt(Math.random() * 100 % 4)
+    switch (random) {
+      case 0:
+        x > 0 ? x-- : 0
+        break
+      case 1:
+        y > 0 ? y-- : 0
+        break
+      case 2:
+        x < 11 ? x++ : 11
+        break
+      case 3:
+        y < 11 ? y++ : 11
+        break
+    }
+    logD()
+    changePos(x, y, d)
+  }, 600)
+}
+
+// alpha1()
+
+// const runAlpha = alpha => {
+
+// }
