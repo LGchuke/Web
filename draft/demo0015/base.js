@@ -36,6 +36,7 @@ let pos = [
   // {x: 0, y: 0},
   // {x: 0, y: 0}
 ]
+const duration = 360
 
 for (let i = 0; i < cn; i++) {
   pos.push({x: 0, y: 0})
@@ -96,31 +97,109 @@ window.addEventListener('keydown', e => {
     d = e.keyCode - 36
     switch (e.keyCode) {
       case 37:
-        x > 0 ? x-- : 0
+        toL()
         break
       case 38:
-        y > 0 ? y-- : 0
+        toU()
         break
       case 39:
-        x < 11 ? x++ : 11
+        toR()
         break
       case 40:
-        y < 11 ? y++ : 11
+        toD()
         break
     }
     logD()
-
-    changePos(x, y, d)
   }
 
   // 按键控制重新初始化
   if ((e.key === 'b' || e.key === 'B') && e.metaKey) {
     init()
   }
-  if ((e.key === 'l' || e.key === 'L') && e.metaKey) {
+  if ((e.key === 'k' || e.key === 'K') && e.metaKey) {
     alpha1()
   }
 })
+
+
+/**
+ * 定义基本运动与组合动作
+ */
+let toU = _ => {
+  if (y > 0) {
+    y--
+    changePos(x, y, d)
+  }
+}
+
+let toD = _ => {
+  if (y < n - 1) {
+    y++
+    changePos(x, y, d)
+  }
+}
+
+let toL = _ => {
+  if (x > 0) {
+    x--
+    changePos(x, y, d)
+  }
+}
+
+let toR = _ => {
+  if (x < n - 1) {
+    x++
+    changePos(x, y, d)
+  }
+}
+
+let actionPre = _ => {
+  return new Promise(resolve => {
+    let i = 0
+    let tmpId = setInterval(_ => {
+      switch (i++) {
+        case 0:
+          toR()
+          break
+        case 1:
+          toU()
+          break
+        case 2:
+          toL()
+          break
+        case 3:
+          toD()
+          resolve(tmpId)
+          break
+      }
+    }, duration)
+  })
+}
+
+// 上、左（右）、下
+let action1 = (flag = true) => {
+  return new Promise(resolve => {
+    let i = 0
+    let tmpId = setInterval(_ => {
+      switch (i++) {
+        case 0:
+          toU()
+          break
+        case 1:
+          if (flag) {
+            toL()
+          } else {
+            toR()
+          }
+          break
+        case 2:
+          toD()
+          resolve(tmpId)
+          break
+      }
+    }, duration)
+  })
+}
 
 
 /**
@@ -151,38 +230,47 @@ const alpha0 = _ => {
 }
 
 const alpha1 = _ => {
-  for (let i = 0; i < 4; i++) {
-    x++
-    changePos(x, y, d)
+  let start_time = Date.now()
+
+  let logD = i => {
+    let stop_time = Date.now()
+    log('i: ' + i + ', x: ' + x + ', y: ' + y + ', time: ' + (stop_time - start_time) + 'ms')
   }
-  for (let i = 0; i < 4; i++) {
-    y++
-    changePos(x, y, d)
-  }
-  let random
-  setInterval(_ => {
-    random = parseInt(Math.random() * 100 % 4)
-    switch (random) {
-      case 0:
-        x > 0 ? x-- : 0
-        break
-      case 1:
-        y > 0 ? y-- : 0
-        break
-      case 2:
-        x < 11 ? x++ : 11
-        break
-      case 3:
-        y < 11 ? y++ : 11
-        break
-    }
-    logD()
-    changePos(x, y, d)
-  }, 600)
+
+  new Promise((resolve) => {
+    let i = 0
+    let tmpId = setInterval(_ => {
+      logD(i)
+      if (i++ < 4) {
+        toR()
+      } else {
+        resolve(tmpId)
+      }
+    }, duration)
+  })
+  .then(id => {
+    clearInterval(id)
+    return new Promise(resolve => {
+      let i = 0
+      let tmpId = setInterval(_ => {
+        logD(i)
+        if (i++ < 4) {
+          toD()
+        } else {
+          resolve(tmpId)
+        }
+      }, duration)
+    })
+  })
+  .then(id => {
+    clearInterval(id)
+    return actionPre(true)
+  })
+  .then(id => {
+    clearInterval(id)
+    return action1(true)
+  })
+  .then(id => {
+    clearInterval(id)
+  })
 }
-
-// alpha1()
-
-// const runAlpha = alpha => {
-
-// }
