@@ -1,0 +1,114 @@
+* {
+  font-family: menlo;
+}
+
+body {
+  background: #333;
+}
+
+$wrapHeight: 555px;
+
+$headerHeight: 20px;
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 320px;
+  max-width: 320px;
+  height: $wrapHeight;
+  background: #fff;
+  overflow: hidden;
+  .header {
+    position: relative;
+    padding-left: 22px;
+    height: $headerHeight;
+    line-height: $headerHeight;
+    color: #fff;
+    background: rgb(240, 96, 96);
+    font-size: 12px;
+
+    padding-left: 12px;
+    background: #fff;
+    // color: rgb(88, 179, 255);
+    color: #222;
+  }
+  .cw {
+    position: relative;
+    width: 100%;
+    height: $wrapHeight - $headerHeight;
+    background: #fff;
+    transition: transform .3s ease-in-out;
+
+    // display: block;
+    // &:before {
+    //   content: '';
+    //   display: block;
+    //   clear: both;
+    // }
+    // padding: 80px 40px;
+    box-sizing: border-box;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      transition: transform .3s ease-in-out;
+    }
+  }
+  #c1 {
+    .content {
+      background-image: url('img/01.png');
+      background-size: 322px 569px;
+      background-position: 1px -30px;
+    }
+    &.inactive {
+      .content {
+        transform-origin: center center;
+        transform: scale(0.8);
+      }
+    }
+  }
+  #c2 {
+    .content {
+      background-image: url('img/02.png');
+      background-size: 322px 569px;
+      background-position: 1px -30px;
+    }
+    &.active {
+      z-index: 9999;
+      transform: translateY($headerHeight - $wrapHeight);
+    }
+  }
+  #mask {
+    position: absolute;
+    top: $headerHeight;
+    width: 100%;
+    height: $wrapHeight - $headerHeight;
+    background: rgba(0, 0, 0, 0.55);
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: 100;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+#btn {
+  position: absolute;
+  top: 420px;
+  right: 220px;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  background: rgb(88, 179, 255);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.075), 0 0 0 rgba(11, 177, 241, 0.8);
+  transition: box-shadow .26s ease-in-out;
+  &:hover {
+    box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.075), 0 0 1em rgba(11, 177, 241, 0.8);
+  }
+}
