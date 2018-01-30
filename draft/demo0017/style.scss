@@ -1,16 +1,26 @@
-// #box {
-//   position: relative;
-//   wi
-// }
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  background-color: #333;
+}
 
+#canvas {
+  // border: 1px solid #000;
+}
+
+$size: 10px;
+$top: 200px;
+$left: 100px;
 
 #ball {
   position: absolute;
-  top: 100px;
-  left: 100px;
-  width: 10px;
-  height: 10px;
+  top: $top - $size / 2;
+  left: $left - $size / 2;
+  width: $size;
+  height: $size;
   border-radius: 5px;
   background: rgb(88, 179, 255);
   // transition: top .0165s ease-in-out, left .0165s linear;
