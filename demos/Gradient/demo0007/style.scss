@@ -1,0 +1,56 @@
+body {
+  background: #000;
+}
+
+$url: './img/moon.png';
+
+$color1: #cd0000;
+$color2: #fbff00;
+$color3: #16cd00;
+$color4: #0983eb;
+
+$size: 290px;
+
+.moon {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background:  url($url) no-repeat;
+  &:nth-child(1) {
+    background: linear-gradient(to bottom left, $color1, rgba(255,255,255,0)), url($url) no-repeat;
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(to bottom left, $color2, rgba(255,255,255,0)), url($url) no-repeat;
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(to bottom left, $color3, rgba(255,255,255,0)), url($url) no-repeat;
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(to bottom left, $color4, rgba(255,255,255,0)), url($url) no-repeat;
+  }
+  transition: all .3s ease-in-out;
+  &:active {
+    transform: scale(2);
+  }
+}
+
+
+
+
+.grid {
+  display: grid;
+  grid-auto-rows: minmax($size + 10px, auto);
+  grid-gap: 5px;
+  justify-content: center;
+  // justify-content: space-between;
+  .row {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+}
