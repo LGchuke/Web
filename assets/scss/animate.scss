@@ -1,0 +1,32 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: cubic-bezier(0.3,0,0,1);
+    animation-timing-function: cubic-bezier(0.3,0,0,1);
+  }
+  76.92% {
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.3,0,0,1);
+    animation-timing-function: cubic-bezier(0.3,0,0,1);
+  }
+  76.92% {
+    opacity: 0.5;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
