@@ -4,22 +4,22 @@
 }
 .card {
 	box-shadow: 0px 2px 0px rgba(170,170,170,0.1);
-  	background: #fff;
-  	margin-bottom: 20px;
-  	border-radius: 3px;
-  	margin-left: 2px;
-  	margin-right: 2px;
-  	.card-heading {
-  		overflow: hidden;
-  		margin-bottom: 7px;
-  		display: block;
-  		cursor: pointer;
+	background: #fff;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	margin-left: 2px;
+	margin-right: 2px;
+	.card-heading {
+		overflow: hidden;
+		margin-bottom: 7px;
+		display: block;
+		cursor: pointer;
 		padding: 10px 18px 0;
-  		color: #333;
-  		&:hover {
-  			color: $color-primary;
-  		}
-  		.card-icon {
+		color: #333;
+		&:hover {
+			color: $color-primary;
+		}
+		.card-icon {
 			width: 32px;
 			height: 32px;
 			border-radius: 32px;
@@ -31,17 +31,17 @@
 				height: 100%;
 				border-radius: 32px;
 			}
-  		}
-  		.card-title {
-  			display: block;
-  			padding-left: 40px;
+		}
+		.card-title {
+			display: block;
+			padding-left: 40px;
 			margin-top: 6px;
 			font-weight: 700;
 			font-size: 15px;
 			color: inherit;
-  		}
-  	}
-  	.card-body {
+		}
+	}
+	.card-body {
 		color: #666666;
 		font-size: 12px;
 		white-space: nowrap;
@@ -49,15 +49,15 @@
 		overflow: hidden;
 		margin-bottom: 2px;
 		padding: 0 18px;
-  	}
-  	.card-footer {
+	}
+	.card-footer {
 		padding: 0 18px 8px;
-  		table {
-  			width: 100%;
-  			td {
-  				text-align: center;
+		table {
+			width: 100%;
+			td {
+				text-align: center;
 				cursor: pointer;
-  			}
+			}
 			.done {
 				color: $color-primary;
 			}
@@ -69,8 +69,11 @@
 					color: #bbb;
 				}
 			}
-  		}
-  	}
+		}
+	}
+	&.no-footer {
+		padding-bottom: 8px;
+	}
 }
 .panel-body .card {
 	&:hover {

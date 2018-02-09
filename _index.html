@@ -10,6 +10,12 @@
 </head>
 <body>
 
+  <header class="mobile-header-wrap">
+    <a class="mobile-logo" href="#">
+      <img src="assets/img/logo/logo_mobile.svg">
+    </a>
+  </header>
+
   <div class="btn-mobile-sidenav">
     <div class="nav-bar">
         <span></span>
@@ -35,7 +41,7 @@
     </div>
 
     <!-- 这里主要是 js 处理点击，控制 min-height -->
-    <ul class="nav-tags mCustomScrollbar" style="display: block; min-height: 200px;">
+    <ul class="nav-tags mCustomScrollbar" style="display: block;">
       <li>
         <a href="#热门推荐">
           <i class="csz czs-fire-l"></i>
@@ -67,6 +73,47 @@
         </a>
       </li>
     </ul>
+
+    <!-- ** -->
+    <div class="nav-item nav-item-1 active">
+      <a href="#">
+        <i class="csz czs-circle"></i>
+        <span>设计 Design</span>
+      </a>
+    </div>
+    <ul class="nav-tags mCustomScrollbar" style="display: block;">
+      <li>
+        <a href="#热门推荐">
+          <i class="csz czs-fire-l"></i>
+          热门推荐
+        </a>
+      </li>
+      <li>
+        <a href="#灵感采集">
+          <i class="csz czs-light-l"></i>
+          灵感采集
+        </a>
+      </li>
+      <li>
+        <a href="#灵感采集">
+          <i class="csz czs-light-l"></i>
+          灵感采集
+        </a>
+      </li>
+      <li>
+        <a href="#灵感采集">
+          <i class="csz czs-light-l"></i>
+          灵感采集
+        </a>
+      </li>
+      <li>
+        <a href="#灵感采集">
+          <i class="csz czs-light-l"></i>
+          灵感采集
+        </a>
+      </li>
+    </ul>
+    <!-- ** -->
   </div>
   <!-- end sidenav -->
 
@@ -94,12 +141,12 @@
       <div class="select-bar">
         <ul>
           <li>
-            <a class="active" href="/">
+            <a class="active" href="#">
               <i class="czs-bookmark-l"></i>书签
             </a>
           </li>
           <li>
-            <a class="" href="/designtool">
+            <a class="" href="#">
               <i class="czs-wrench-l"></i>利器
             </a>
           </li>
@@ -117,19 +164,26 @@
           <div class="row">
             <!-- card 样板 .sm-6.md-4.lg-3>.card -->
             <div class="sm-6 md-4 lg-3">
-              <div class="card">
+              <div class="card no-footer">
                 <a class="card-heading link-tooltip" title=".." href="#" target="_blank">
                   <span class="card-icon">
-                      <img src="assets/images/D/dribbble.png">
+                    <img src="assets/img/icons/huaban.png">
                   </span>
-                  <span class="card-title">Dribbble</span>
+                  <span class="card-title">花瓣</span>
                 </a>
-                <div class="card-body">全球UI设计师作品秀社区</div>
+                <div class="card-body">中国美图收藏采集站</div>
                 <!-- 那 card-footer 乍一看太蠢了，明天再说吧 -->
-                <div class="card-footer">
-                  <span>xx</span>
-                  <span>yy</span>
-                </div>
+              </div>
+            </div>
+            <div class="sm-6 md-4 lg-3">
+              <div class="card no-footer">
+                <a class="card-heading link-tooltip" title=".." href="#" target="_blank">
+                  <span class="card-icon">
+                      <img src="assets/img/icons/huaban.png">
+                  </span>
+                  <span class="card-title">花瓣</span>
+                </a>
+                <div class="card-body">中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站</div>
               </div>
             </div>
           </div>
@@ -138,5 +192,6 @@
     </div>
   </div>
 
+  <script src="./assets/js/base.js"></script>
 </body>
 </html>
