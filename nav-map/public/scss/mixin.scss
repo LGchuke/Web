@@ -1,0 +1,67 @@
+@mixin mq-mobile(){
+  @media screen and ( max-width: 767px )
+  {
+    @content;
+  }
+}
+
+@mixin mq-tablet(){
+  @media screen and (min-width: 768px) and (max-width: 991px)
+  {
+    @content;
+  }
+}
+
+@mixin mq-normal(){
+  @media screen and ( min-width: 992px ) and (max-width: 1299px)
+  {
+    @content;
+  }
+}
+
+@mixin mq-large(){
+  @media screen and ( min-width: 1300px )
+  {
+    @content;
+  }
+}
+
+@mixin mq-tall(){
+  @media screen and ( min-height: 900px )
+  {
+    @content;
+  }
+}
+@mixin mq-medium(){
+  @media screen and ( min-height: 760px ) and (max-height: 899px)
+  {
+    @content;
+  }
+}
+@mixin mq-small(){
+  @media screen and ( min-height: 630px ) and (max-height: 759px)
+  {
+    @content;
+  }
+}
+@mixin mq-smallest(){
+    @media screen and (max-height: 629px)
+    {
+        @content;
+    }
+}
+// placeholder
+%white-card{
+  box-shadow: 0px 2px 0px rgba(170, 170, 170, 0.1);
+  background: #fff;
+}
+%popup-card{
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+%one-line{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

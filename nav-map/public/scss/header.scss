@@ -1,0 +1,75 @@
+.mobile-header-wrap {
+  display: none;
+  z-index: 100;
+  @include mq-mobile(){
+    display: block;
+  }
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #171717;
+  .mobile-logo {
+    display: block;
+    text-decoration: none;
+    margin: 10px auto;
+    width: 40px;
+    img {
+      width: auto;
+      height: 40px;
+      display: block;
+    }
+  }
+}
+
+.btn-mobile-sidenav {
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  color: #ddd;
+  cursor: pointer;
+  display: none;
+  @include mq-mobile() {
+    display: block;
+  }
+}
+.nav-bar-animate span{
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  &:nth-last-child(3) {
+    opacity: 1;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  &:nth-last-child(2) {
+    opacity: 0;
+    //transition: transform 0s;
+  }
+}
+
+.nav-bar {
+  padding: 24px 50px 40px 16px;
+  position: fixed;
+  z-index: 1000;
+  span {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-bottom: 6px;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 20px;
+    transform-origin: 20px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+}
