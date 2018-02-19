@@ -11,14 +11,13 @@ module.exports = [
     entry: {
       index: [
         'react-hot-loader/patch',
-        // 'webpack/hot/only-dev-server', // It's removed in latest version ?
+        // 'webpack/hot/only-dev-server', // It's removed in latest version ? ... I have configured the hotOnly
         path.resolve(__dirname, 'src/index.js'),
       ]
     },
 
     output: {
       filename: '[name].bundle.min.js',
-      // 好好考虑一下
       path: path.resolve(__dirname, 'dist/'),
       publicPath
     },
@@ -44,7 +43,12 @@ module.exports = [
       new HtmlWebpackPlugin({
         template: __dirname + '/public/index.html'
       }),
-      new webpack.HotModuleReplacementPlugin()
+      // new webpack.HotModuleReplacementPlugin() // if the '--hot' option has been indicated, then you don't need this one
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': '"production"'
+        }
+      })
     ],
 
     devServer: {
@@ -53,7 +57,7 @@ module.exports = [
       publicPath,
       // historyApiFallback: true,
       inline: true,
-      // hot: true,  // 这参数与 --hot 与插件 3 者间关系
+      // hot: true,  // 这参数与 --hot 与插件 3 者间关系 -- now 'hot' is deprecated
       hotOnly: true
     }
   },

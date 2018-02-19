@@ -32,3 +32,13 @@ lib/
 res/
 tucao/
 
+
+# nav-map part
+package-lock.json
+
+*.css
+css/
+fonts/
+img/
+node_modules/
+dist/
