@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './App';
 import { AppContainer } from 'react-hot-loader';
 
 
-ReactDOM.render(
+render(
   <AppContainer>
     <App name='igoist' />
   </AppContainer>,

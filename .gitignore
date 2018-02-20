@@ -32,6 +32,9 @@ lib/
 res/
 tucao/
 
+# utility part
+utility/Editor/
+
 
 # nav-map part
 package-lock.json
