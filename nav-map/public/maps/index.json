@@ -1,39 +1,111 @@
 {
-  "name": "草稿 Draft",
-  "panels": [
+  "columns": [
     {
-      "name": "灵感采集..",
-      "iClass": "czs-fire-l",
-      "items": [
+      "index": 0,
+      "name": "草稿",
+      "en": " Draft",
+      "panels": [
         {
-          "icon": "assets/img/icons/huaban.png",
-          "title": "花瓣",
-          "href": "#1",
-          "intro": "中国美图收藏采集站"
+          "anchor": "01",
+          "name": "灵感采集..",
+          "iClass": "czs-fire-l",
+          "items": [
+            {
+              "icon": "assets/img/icons/huaban.png",
+              "title": "花瓣",
+              "href": "http://huaban.com/",
+              "intro": "中国美图收藏采集站"
+            },
+            {
+              "icon": "assets/img/icons/pinterest.png",
+              "title": "花瓣2",
+              "href": "#2",
+              "intro": "中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+            }
+          ]
         },
         {
-          "icon": "assets/img/icons/pinterest.png",
-          "title": "花瓣2",
-          "href": "#2",
-          "intro": "中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+          "anchor": "02",
+          "name": "灵感采集..B",
+          "iClass": "czs-light-l",
+          "items": [
+            {
+              "icon": "assets/img/icons/huaban.png",
+              "title": "花瓣B",
+              "href": "#3",
+              "intro": "中国美图收藏采集站"
+            },
+            {
+              "icon": "assets/img/icons/pinterest.png",
+              "title": "花瓣2B",
+              "href": "#4",
+              "intro": "中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+            }
+          ]
         }
       ]
     },
     {
-      "name": "灵感采集..B",
-      "iClass": "czs-light-l",
-      "items": [
+      "index": 1,
+      "name": "草稿2",
+      "en": " Draft2",
+      "panels": [
         {
-          "icon": "assets/img/icons/huaban.png",
-          "title": "花瓣B",
-          "href": "#3",
-          "intro": "中国美图收藏采集站"
+          "anchor": "01",
+          "name": "2灵感采集..",
+          "iClass": "czs-fire-l",
+          "items": [
+            {
+              "icon": "assets/img/icons/huaban.png",
+              "title": "2花瓣",
+              "href": "#1",
+              "intro": "2中国美图收藏采集站"
+            },
+            {
+              "icon": "assets/img/icons/pinterest.png",
+              "title": "2花瓣2",
+              "href": "#2",
+              "intro": "2中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+            }
+          ]
         },
         {
-          "icon": "assets/img/icons/pinterest.png",
-          "title": "花瓣2B",
-          "href": "#4",
-          "intro": "中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+          "anchor": "02",
+          "name": "2灵感采集..",
+          "iClass": "czs-fire-l",
+          "items": [
+            {
+              "icon": "assets/img/icons/huaban.png",
+              "title": "2花瓣",
+              "href": "#1",
+              "intro": "2中国美图收藏采集站"
+            },
+            {
+              "icon": "assets/img/icons/pinterest.png",
+              "title": "2花瓣2",
+              "href": "#2",
+              "intro": "2中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+            }
+          ]
+        },
+        {
+          "anchor": "03",
+          "name": "2灵感采集..B",
+          "iClass": "czs-light-l",
+          "items": [
+            {
+              "icon": "assets/img/icons/huaban.png",
+              "title": "花瓣B",
+              "href": "#3",
+              "intro": "中国美图收藏采集站"
+            },
+            {
+              "icon": "assets/img/icons/pinterest.png",
+              "title": "2花瓣2B",
+              "href": "#4",
+              "intro": "2中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+            }
+          ]
         }
       ]
     }

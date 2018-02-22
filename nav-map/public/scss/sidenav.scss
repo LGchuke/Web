@@ -11,15 +11,10 @@
   position: fixed;
   top: 60px;
   width: 100%;
-  -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  -webkit-animation-duration: 530ms;
   animation-duration: 530ms;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-direction: normal;
   animation-direction: normal;
-  -webkit-animation-delay: 0s;
   animation-delay: 0s;
   z-index: 199;
 }
@@ -55,11 +50,11 @@
     }
   }
   .copyright {
-        display: block;
+    display: block;
     text-align: center;
     color: #686868;
-        font-size: 12px;
-        padding-top: 12px;
+    font-size: 12px;
+    padding-top: 12px;
     &:hover {
       color: #fff;
     }
@@ -68,22 +63,23 @@
     position: relative;
     display: block;
     text-align: center;
-        img {
-            width: 114px;
-            display: block;
-            margin: 0 auto;
+    img {
+      width: 114px;
+      display: block;
+      margin: 0 auto;
       z-index: 2;
-        }
-    img.christmas {
-      position: absolute;
-      z-index: 3;
-      top: -11px;
-      left: 76px;
-      width: 42px;
-      height: auto;
-      @include mq-tablet() {
+      // animation: App-logo-spin infinite 20s, linear;
+      &.christmas {
+        position: absolute;
+        z-index: 3;
         top: -11px;
-        left: 51px;
+        left: 76px;
+        width: 42px;
+        height: auto;
+        @include mq-tablet() {
+          top: -11px;
+          left: 51px;
+        }
       }
     }
   }
@@ -91,7 +87,7 @@
     color: #686868;
     text-align: center;
     margin-bottom: 20px;
-        font-size: 12px;
+    font-size: 12px;
   }
   .nav-item {
     border-top: 2px solid #1f1f1f;
@@ -118,19 +114,19 @@
         font-weight: 200;
       }	
       span {
+        position: relative;
+        top: -2px;
         text-align: center;
-                position: relative;
-                top: -2px;
       }
     }
-  }
-  .nav-item.active {
-    background-color: #fff;
-    a {
-      color: #000;
-    }
-    & + .nav-tags {
-      min-height: 160px;
+    &.active {
+      background-color: #fff;
+      a {
+        color: #000;
+      }
+      & + .nav-tags {
+        min-height: 160px;
+      }
     }
   }
   .nav-tags {
@@ -141,6 +137,8 @@
     overflow: scroll;
     overflow-x: hidden; 
     margin: 0;
+    transition: height .3s ease-in-out;
+
     @include mq-mobile() {
       display: none!important;
     }
@@ -154,7 +152,7 @@
       max-height: 200px;
     }
     @include mq-smallest() {
-        max-height: 0;
+      max-height: 0;
     }
     .active {
       background-color: #222;
@@ -198,3 +196,11 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

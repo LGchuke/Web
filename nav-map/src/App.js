@@ -1,15 +1,27 @@
 import React from 'react';
-import Panel from './Panel';
+import Sidebar from './Sidebar';
+import Main from './Main';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      index: 0,
       res: []
     };
+    this.loadMap = this.loadMap.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(index) {
+    this.setState(() => ({ index }));
   }
 
   componentDidMount() {
+    this.loadMap();
+  }
+
+  loadMap() {
     let xhr = new XMLHttpRequest();
     xhr.overrideMimeType('application/json');
     xhr.open('GET', '/assets/maps/index.json');
@@ -22,18 +34,14 @@ class App extends React.Component {
     xhr.send();
   }
 
-
   render() {
-    let panels = [];
-    if (this.state.res.panels) {
-      panels = [].map.call(this.state.res.panels, panel => {
-        return <Panel panel={panel} />;
-      });
-    }
+    const index = this.state.index;
+    const columns = this.state.res.columns;
 
     return (
       <div>
-        { panels }
+        <Sidebar columns={ columns } handleClick={ this.handleClick } />
+        <Main index={ index } columns={ columns } />
       </div>
     );
   }

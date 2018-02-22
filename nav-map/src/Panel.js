@@ -14,12 +14,13 @@ class Panel extends React.Component {
     let items = [];
     if (panel) {
       items = [].map.call(panel.items, item => {
-        return <Card item={item} />;
+        return <Card item={ item } />;
       });
     }
 
     return (
       <div className='panel'>
+        <a id={ panel.anchor }></a>
         <div className='panel-title card'>
           <i className={ panel.iClass }></i>
           { panel.name }

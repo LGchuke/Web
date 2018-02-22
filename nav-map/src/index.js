@@ -6,7 +6,7 @@ import { AppContainer } from 'react-hot-loader';
 
 render(
   <AppContainer>
-    <App name='igoist' />
+    <App />
   </AppContainer>,
   document.getElementById('app')
 );
