@@ -18,7 +18,7 @@ class Main extends React.Component {
       navCnName = columns[index].name;
       navEnName = columns[index].en;
       panels = [].map.call(columns[index].panels, panel => {
-        return <Panel panel={ panel } />;
+        return <Panel key={panel.anchor} panel={ panel } />;
       });
     }
 

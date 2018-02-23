@@ -19,6 +19,8 @@
   z-index: 199;
 }
 
+$bgColor: #171717;
+
 .sidenav{
   -webkit-overflow-scrolling: touch;
   width: 230px;
@@ -27,7 +29,7 @@
   top: 0;
   left: 0;
   bottom: -100px;
-  background-color: #171717;
+  background-color: $bgColor;
   padding: 31px 0;
   color: #ccc;
   @include mq-tablet() {
@@ -69,6 +71,10 @@
       margin: 0 auto;
       z-index: 2;
       // animation: App-logo-spin infinite 20s, linear;
+      transition: all .36s ease-in-out;
+      &:hover {
+        transform: rotate(180deg);
+      }
       &.christmas {
         position: absolute;
         z-index: 3;
@@ -84,48 +90,69 @@
     }
   }
   .site-description {
-    color: #686868;
+    color: #fff;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 18px;
+    font-family: menlo;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
   }
   .nav-item {
+    padding: 7px;
+    padding-left: 40px;
+    background-color: $bgColor;
     border-top: 2px solid #1f1f1f;
     &:last-child {
       border-bottom: 2px solid #2e2e2e;
     }
     &:hover {
       background-color: #fff;
-      a {
+      h1, p {
         color: #000;
       }
-    }
-    a {
-      color: #fff;	
-      text-align: center;
-      font-size: 14px;
-      font-weight: 700;
-      padding: 7px;
-      display: block;
-      .csz {
-        display: block;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 200;
-      }	
-      span {
-        position: relative;
-        top: -2px;
-        text-align: center;
+      h1 {
+        text-shadow: 0 0 10px #000;
       }
     }
     &.active {
       background-color: #fff;
-      a {
+      h1, p {
         color: #000;
       }
+      h1 {
+        text-shadow: 0 0 10px #000F;
+      }
       & + .nav-tags {
+        display: block;
         min-height: 160px;
+      }
+    }
+    h1 {
+      display: block;
+      margin: 0;
+      padding: 0;
+      color: #11aaea;
+      font-size: 14px;
+      font-weight: 700;
+      text-shadow: 0 0 5px #228DFF, 0 0 10px #228DFF;
+    }
+    p {
+      margin:0;
+      padding: 0;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: menlo;
+      overflow: hidden;
+      // text-overflow: "";
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      small {
+        // width: 7rem;
+        height: 1.4rem;
+        opacity: 0.5;
+        margin-left: 2rem;
+        font-size: 50%;
       }
     }
   }
@@ -166,14 +193,19 @@
         background: #222;
       }
       a {
-        text-decoration: none;
-        color: #686868;
         display: block;
         padding: 9px;
+        padding-left: 60px;
+        border-left: 0 solid transparent;
+        color: #87ceeb;
         font-size: 12px;
-        text-align: center;
+        text-decoration: none;
+        transition: border-width 0.5s, border-color 3s, background-image 3s;
         &:hover {
           color: #fff;
+          border-left-width: 12px;
+          border-color: rgb(168, 240, 170);
+          background-image: linear-gradient(105deg, transparent 40%, rgba(168, 240, 170, 0.6) 100%);
         }
         .csz {
           font-size: 16px;

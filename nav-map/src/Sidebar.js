@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
         </a>
 
         <div className="site-description">
-          Web 栏目导航
+          Web Nav Map
         </div>
         
         { items }

@@ -4,10 +4,11 @@
       "index": 0,
       "name": "草稿",
       "en": " Draft",
+      "intro": "Like a web playground, for single demo, no matter what it's name should be or which type it belongs",
       "panels": [
         {
-          "anchor": "01",
-          "name": "灵感采集..",
+          "anchor": "draft01",
+          "name": "默认..",
           "iClass": "czs-fire-l",
           "items": [
             {
@@ -21,12 +22,120 @@
               "title": "花瓣2",
               "href": "#2",
               "intro": "中国美图收藏采集站中国美图收藏采集站中国美图收藏采集站"
+            },
+            {
+              "icon": "",
+              "title": "demo0001",
+              "href": "http://localhost/~egoist/Web/draft/demo0001/",
+              "intro": "Just demo00001"
+            },
+            {
+              "icon": "",
+              "title": "demo0002",
+              "href": "http://localhost/~egoist/Web/draft/demo0002/",
+              "intro": "Just demo00002"
+            },
+            {
+              "icon": "",
+              "title": "demo0003",
+              "href": "http://localhost/~egoist/Web/draft/demo0003/",
+              "intro": "Just demo00003"
+            },
+            {
+              "icon": "",
+              "title": "demo0004",
+              "href": "http://localhost/~egoist/Web/draft/demo0004/",
+              "intro": "Just demo00004"
+            },
+            {
+              "icon": "",
+              "title": "demo0005",
+              "href": "http://localhost/~egoist/Web/draft/demo0005/",
+              "intro": "Just demo00005"
+            },
+            {
+              "icon": "",
+              "title": "demo0006",
+              "href": "http://localhost/~egoist/Web/draft/demo0006/",
+              "intro": "Just demo00006"
+            },
+            {
+              "icon": "",
+              "title": "demo0007",
+              "href": "http://localhost/~egoist/Web/draft/demo0007/",
+              "intro": "Just demo00007"
+            },
+            {
+              "icon": "",
+              "title": "demo0008",
+              "href": "http://localhost/~egoist/Web/draft/demo0008/",
+              "intro": "Just demo00008"
+            },
+            {
+              "icon": "",
+              "title": "demo0009",
+              "href": "http://localhost/~egoist/Web/draft/demo0009/",
+              "intro": "Just demo00009"
+            },
+            {
+              "icon": "",
+              "title": "demo0010",
+              "href": "http://localhost/~egoist/Web/draft/demo0010/",
+              "intro": "Just demo00010"
+            },
+            {
+              "icon": "",
+              "title": "demo0011",
+              "href": "http://localhost/~egoist/Web/draft/demo0011/",
+              "intro": "Just demo00011"
+            },
+            {
+              "icon": "",
+              "title": "demo0012",
+              "href": "http://localhost/~egoist/Web/draft/demo0012/",
+              "intro": "Just demo00012"
+            },
+            {
+              "icon": "",
+              "title": "demo0013",
+              "href": "http://localhost/~egoist/Web/draft/demo0013/",
+              "intro": "Just demo00013"
+            },
+            {
+              "icon": "",
+              "title": "demo0014",
+              "href": "http://localhost/~egoist/Web/draft/demo0014/",
+              "intro": "Just demo00014"
+            },
+            {
+              "icon": "",
+              "title": "demo0015",
+              "href": "http://localhost/~egoist/Web/draft/demo0015/",
+              "intro": "Just demo00015"
+            },
+            {
+              "icon": "",
+              "title": "demo0016",
+              "href": "http://localhost/~egoist/Web/draft/demo0016/",
+              "intro": "Just demo00016"
+            },
+            {
+              "icon": "",
+              "title": "demo0017",
+              "href": "http://localhost/~egoist/Web/draft/demo0017/",
+              "intro": "Just demo00017"
+            },
+            {
+              "icon": "",
+              "title": "demo0018",
+              "href": "http://localhost/~egoist/Web/draft/demo0018/",
+              "intro": "Just demo0018"
             }
           ]
         },
         {
-          "anchor": "02",
-          "name": "灵感采集..B",
+          "anchor": "draft02",
+          "name": "draft 灵感采集..",
           "iClass": "czs-light-l",
           "items": [
             {
@@ -47,12 +156,13 @@
     },
     {
       "index": 1,
-      "name": "草稿2",
-      "en": " Draft2",
+      "name": "示例",
+      "en": " Demos",
+      "intro": "Different kinds of web demos",
       "panels": [
         {
-          "anchor": "01",
-          "name": "2灵感采集..",
+          "anchor": "demos01",
+          "name": "Canvas",
           "iClass": "czs-fire-l",
           "items": [
             {
@@ -70,8 +180,8 @@
           ]
         },
         {
-          "anchor": "02",
-          "name": "2灵感采集..",
+          "anchor": "demos02",
+          "name": "Background",
           "iClass": "czs-fire-l",
           "items": [
             {
@@ -89,8 +199,8 @@
           ]
         },
         {
-          "anchor": "03",
-          "name": "2灵感采集..B",
+          "anchor": "demos03",
+          "name": "LinearGradient",
           "iClass": "czs-light-l",
           "items": [
             {

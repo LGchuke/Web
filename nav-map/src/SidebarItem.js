@@ -40,21 +40,26 @@ class SidebarItem extends React.Component {
     let liItems = [];
     if (column) {
       liItems = [].map.call(column.panels, item => {
-        return <LiItem item={ item } />;
+        return <LiItem key={item.name} item={ item } />;
       });
     }
 
-    let titleClass = this.state.active ? 'nav-item nav-item-1 active' : 'nav-item nav-item-1';
+    const smallIntro = column.intro ? column.intro : 'el psy congroo... el psy congroo... el psy congroo...';
+
+    const titleClass = this.state.active ? 'nav-item nav-item-1 active' : 'nav-item nav-item-1';
     return (
       <div>
         <div className={ titleClass } onClick={ this.handle }>
-          <a>
-            <i className='csz czs-circle'></i>
-            <span>{ column.name }&nbsp;{ column.en }</span>
-          </a>
+          <h1>
+            { column.name }
+          </h1>
+          <p>
+            { column.en }
+            <small>{ smallIntro }</small>
+          </p>
         </div>
 
-        <ul className='nav-tags mCustomScrollbar' style={{ display: 'block' }}>
+        <ul className='nav-tags mCustomScrollbar'>
           { liItems }
         </ul>
       </div>

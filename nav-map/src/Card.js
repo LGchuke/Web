@@ -11,12 +11,13 @@ class Card extends React.Component {
   render() {
     const item = this.state.item;
 
+    let icon = item.icon ? item.icon : 'assets/img/icons/default.ico';
     return (
       <div class='sm-6 md-4 lg-3'>
         <div class='card no-footer'>
           <a class='card-heading link-tooltip' title={ item.title } href={ item.href } target='_blank'>
             <span class='card-icon'>
-              <img src={ item.icon } />
+              <img src={ icon } />
             </span>
             <span class='card-title'>{ item.title }</span>
           </a>
