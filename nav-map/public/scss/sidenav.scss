@@ -189,9 +189,6 @@ $bgColor: #171717;
     }
     li {
       padding-right: 0;
-      &:hover {
-        background: #222;
-      }
       a {
         display: block;
         padding: 9px;
@@ -204,13 +201,37 @@ $bgColor: #171717;
         &:hover {
           color: #fff;
           border-left-width: 12px;
-          border-color: rgb(168, 240, 170);
-          background-image: linear-gradient(105deg, transparent 40%, rgba(168, 240, 170, 0.6) 100%);
+          border-color: #ff1177;
+          background-image: linear-gradient(105deg, transparent 40%, #ff117799 100%);
         }
         .csz {
           font-size: 16px;
           margin-right: 8px;
         }
+      }
+      &:nth-child(7n+2):hover a {
+        border-color: #FF9900;
+        background-image: linear-gradient(105deg, transparent 40%, #FF990099 100%);
+      }
+      &:nth-child(7n+3):hover a {
+        border-color: #FFDD1B;
+        background-image: linear-gradient(105deg, transparent 40%, #FFDD1B99 100%);
+      }
+      &:nth-child(7n+4):hover a {
+        border-color: rgb(26, 206, 32);
+        background-image: linear-gradient(105deg, transparent 40%, rgba(26, 206, 32, 0.6) 100%);
+      }
+      &:nth-child(7n+5):hover a {
+        border-color: rgb(168, 240, 170);
+        background-image: linear-gradient(105deg, transparent 40%, rgba(168, 240, 170, 0.6) 100%);
+      }
+      &:nth-child(7n+6):hover a {
+        border-color: #228DFF;
+        background-image: linear-gradient(105deg, transparent 40%, rgba(34, 141, 255, 0.6) 100%);
+      }
+      &:nth-child(7n+0):hover a {
+        border-color: #BA01FF;
+        background-image: linear-gradient(105deg, transparent 40%, #BA01FF99 100%);
       }
     }
   }
