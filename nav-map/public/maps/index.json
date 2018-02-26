@@ -1,9 +1,8 @@
 {
   "columns": [
     {
-      "index": 0,
       "name": "草稿",
-      "en": " Draft",
+      "en": "Draft",
       "intro": "Like a web playground, for single demo, no matter what it's name should be or which type it belongs",
       "panels": [
         {
@@ -155,9 +154,8 @@
       ]
     },
     {
-      "index": 1,
       "name": "示例",
-      "en": " Demos",
+      "en": "Demos",
       "intro": "Different kinds of web demos",
       "panels": [
         {
@@ -218,6 +216,42 @@
           ]
         }
       ]
+    },
+    {
+      "name": "框架",
+      "en": "Frame",
+      "intro": "Frames like Bootstrap, AmazeUI, etc... And it should be ignored",
+      "panels": []
+    },
+    {
+      "name": "库",
+      "en": "Lib",
+      "intro": "Libs like jquery.js, Three.js, react.min.js, etc... And it should be ignored",
+      "panels": []
+    },
+    {
+      "name": "资源",
+      "en": "Resource",
+      "intro": "Resource like background imgs, some color, etc... It should be rebuilt",
+      "panels": []
+    },
+    {
+      "name": "矢量图",
+      "en": "SVG",
+      "intro": "Just SVG demos!",
+      "panels": []
+    },
+    {
+      "name": "吐槽",
+      "en": "tucao",
+      "intro": "Don't care about this one😝",
+      "panels": []
+    },
+    {
+      "name": "实用工具",
+      "en": "Utility",
+      "intro": "I was, was wandering to write some utilities...",
+      "panels": []
     }
   ]
 }

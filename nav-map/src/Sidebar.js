@@ -15,13 +15,14 @@ class Sidebar extends React.Component {
         return <SidebarItem column={ column } index={ index } handleClick={ handleClick } />;
       });
     }
+    const sidebarSwitch = this.props.sidebarSwitch ? 'show-sidenav' : 'hide-sidenav';
     return (
-      <div className="sidenav">
-        <a className="logo" href="/">
-          <img src="assets/img/logo/logo2.svg" alt="logo" />
+      <div className={ 'sidenav ' + sidebarSwitch }>
+        <a className='logo' href='/'>
+          <img src='assets/img/logo/logo2.svg' alt='logo' />
         </a>
 
-        <div className="site-description">
+        <div className='site-description'>
           Web Nav Map
         </div>
         
