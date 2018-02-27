@@ -9,6 +9,7 @@ the way to use flex, grid...
 * demo0000 -- table & table-cell 参考了该文章[能使用html/css解决的问题就不要使用JS](https://zhuanlan.zhihu.com/p/26138999)
 * demo0001 -- Grid Layout Basic(It's enough, so easy)
 * demo0002 -- Grid Layout Use Case
+* demo0003 -- Grid Layout Use Case 02
 
 
 ### display: grid
