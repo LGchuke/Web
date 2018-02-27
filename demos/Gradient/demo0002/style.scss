@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  // display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
+  width: 320px;
+  height: 320px;
+  // background-repeat: no-repeat !important;
+}
+
+#i01 {
+  background: linear-gradient(135deg,#708090 22px,#d9ecff 0,#d9ecff 24px,transparent 0,transparent 67px,#d9ecff 0,#d9ecff 69px,transparent 0),
+              linear-gradient(225deg,#708090 22px,#d9ecff 0,#d9ecff 24px,transparent 0,transparent 67px,#d9ecff 0,#d9ecff 69px,transparent 0)0 64px;
+  background-color: #708090;
+  background-size: 64px 128px;
+}
+
+#i02 {
+  background: radial-gradient(circle at 0 50%,rgba(96,16,48,0) 9px,#613 10px,rgba(96,16,48,0) 11px) 0 10px,radial-gradient(at 100% 100%,rgba(96,16,48,0) 9px,#613 10px,rgba(96,16,48,0) 11px),#8a3;
+  background-size: 20px 20px;
+  &:hover {
+    background-color: #7ecaf6;
+  }
+}
+
+#i03 {
+  background-color: #026873;
+  background-image: linear-gradient(90deg,hsla(0,0%,100%,.07) 50%,transparent 0),
+                    linear-gradient(90deg,hsla(0,0%,100%,.13) 50%,transparent 0),
+                    linear-gradient(90deg,transparent 50%,hsla(0,0%,100%,.17) 0),
+                    linear-gradient(90deg,transparent 50%,hsla(0,0%,100%,.19) 0);
+  background-size: 13px,29px,37px,53px;
+  &:hover {
+    background-color: #f2849e;
+  }
+}
+
+$colorA: #000;
+$colorB: #fff;
+
+#i04 {
+  // background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  // background-size: 13px,29px,37px,53px;
+  background: linear-gradient(90deg, $colorA, $colorA 12px, $colorB 0) 0 12px,
+              linear-gradient(270deg, $colorA, $colorA 12px, $colorB 0);
+  // background:
+  //   repeating-radial-gradient(
+  //     circle at 0 0,
+  //     #eee,
+  //     #ccc 50px
+  //   );
+  background-size: 24px 12px;
+  background-repeat: no-repeat;
+  &:hover {
+    background-color: #f2849e;
+  }
+}
