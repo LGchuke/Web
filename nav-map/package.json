@@ -2,11 +2,12 @@
   "name": "web-nav-map",
   "version": "0.1.0",
   "description": "map of navigation for web",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --hot",
+    "build": "webpack"
   },
   "keywords": [
     "igoist"

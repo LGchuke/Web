@@ -75,8 +75,9 @@
       
     .selected-nav-link-wrapper {
       margin-right: 74px;
-      transform: translateY(-43px);
       line-height: 22px;
+      transition: transform 0.5s;
+      transform: translateY(-43px);
       .selected-nav-link-item {
         margin-bottom: 20px;
         text-align: right; 
