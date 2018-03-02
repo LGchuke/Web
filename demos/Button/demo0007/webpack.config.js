@@ -31,6 +31,10 @@ module.exports = [
           loaders: ['babel-loader', 'eslint-loader'],
           include: [path.join(__dirname, publicPath + 'src')]
         },
+        {
+          test: /\.css$/,
+          loaders: ['style-loader', 'css-loader'],
+        }
       ]
     },
 
