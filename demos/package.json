@@ -1,0 +1,32 @@
+{
+  "name": "web-demos",
+  "version": "0.0.9",
+  "description": "different kind of demos of web",
+  "scripts": {
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --hot",
+    "build": "webpack"
+  },
+  "keywords": [
+    "igoist"
+  ],
+  "author": "igoist",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.6.1",
+    "html-webpack-plugin": "^2.30.1",
+    "react-hot-loader": "^3.1.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
