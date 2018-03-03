@@ -5,14 +5,11 @@ import '../public/css/style.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   index: 0,
-    //   res: [],
-    //   sidebarSwitch: true
-    // };
+    this.state = {
+      res: [],
+    };
     this.loadMap = this.loadMap.bind(this);
   }
-
 
   componentDidMount() {
     this.loadMap();
@@ -26,24 +23,19 @@ class App extends React.Component {
       if (xhr.status >= 200 && xhr.status < 300) {
         const res = JSON.parse(xhr.response);
         console.log(res);
-        // this.setState(() => ({ res }));
+        this.setState(() => ({ res }));
       }
     };
     xhr.send();
   }
 
   render() {
-    const items = [
-      {
-
-      },
-      {
-
-      }
-    ];
+    const rows = [].map.call(this.state.res, (row, index) => {
+      return <Row key={ index.toString() } items={ row.items } />;
+    });
     return (
       <div id='neon-box' className='grid'>
-        <Row items={ items } />
+        { rows }
         <div className='row'>
           <div id='item0000' className='item'>
             <p>
