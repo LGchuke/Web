@@ -213,5 +213,92 @@
         "name": "Button"
       }
     ]
+  },
+  {
+    "pre": "neon-2 sm",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "neon-2",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "neon-2 lg",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
   }
 ]
