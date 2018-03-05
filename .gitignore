@@ -10,6 +10,9 @@
 *.gif
 *.svg
 
+# video
+*.mp4
+
 *.pdf
 *.txt
 
@@ -45,3 +48,5 @@ fonts/
 img/
 node_modules/
 dist/
+
+.#*
