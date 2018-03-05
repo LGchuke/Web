@@ -2,7 +2,7 @@
   {
     "items": [
       {
-        "margin": "18px 4px",
+        "margin": "",
         "className": "btn red",
         "name": "Button"
       },
@@ -11,7 +11,6 @@
         "name": "Button"
       },
       {
-        "margin": "",
         "className": "btn yellow",
         "name": "Button"
       },
@@ -20,7 +19,6 @@
         "name": "Button"
       },
       {
-        "margin": "",
         "className": "btn blue",
         "name": "Button"
       },
@@ -43,29 +41,175 @@
     ]
   },
   {
+    "pre": "gradient sm",
     "items": [
       {
-        "className": "btn gradient red",
+        "className": "btn red",
         "name": "Button"
       },
       {
-        "className": "btn gradient orange",
+        "className": "btn orange",
         "name": "Button"
       },
       {
-        "className": "btn gradient yellow",
+        "className": "btn yellow",
         "name": "Button"
       },
       {
-        "className": "btn gradient green",
+        "className": "btn green",
         "name": "Button"
       },
       {
-        "className": "btn gradient blue",
+        "className": "btn blue",
         "name": "Button"
       },
       {
-        "className": "btn gradient purple",
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "gradient",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "gradient lg",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "neon-1 sm",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "neon-1",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
+      }
+    ]
+  },
+  {
+    "pre": "neon-1 lg",
+    "items": [
+      {
+        "className": "btn red",
+        "name": "Button"
+      },
+      {
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
         "name": "Button"
       }
     ]

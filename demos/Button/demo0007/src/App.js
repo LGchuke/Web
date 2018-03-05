@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     const rows = [].map.call(this.state.res, (row, index) => {
-      return <Row key={ index.toString() } items={ row.items } />;
+      return <Row key={ index.toString() } row={ row } />;
     });
     return (
       <div id='neon-box' className='grid'>

@@ -23,6 +23,10 @@ class Button extends React.Component {
     if (!className) {
       className = 'btn blue';
     }
+    const pre = this.props.pre;
+    if (pre) {
+      className += ' ' + this.props.pre;
+    }
 
     return (
       <button ref={ button => { this.button = button; }} className={ className } style={{ margin }}>
@@ -39,9 +43,10 @@ class Item extends React.Component {
 
   render() {
     const item = this.props.item;
+    const pre = this.props.pre;
     return (
       <div className='item'>
-        <Button item={ item } />
+        <Button item={ item } pre={ pre } />
       </div>
     );
   }

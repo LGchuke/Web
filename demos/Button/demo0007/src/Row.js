@@ -7,13 +7,14 @@ class Row extends React.Component {
   }
 
   render() {
-    const items = [].map.call(this.props.items, (item, index) => {
-      return <Item key={ index.toString() } item={ item } />;
+    const { pre, items } = this.props.row;
+    const doms = [].map.call(items, (item, index) => {
+      return <Item key={ index.toString() } item={ item } pre={ pre } />;
     });
 
     return (
       <div className='row'>
-        { items }
+        { doms }
       </div>
     );
   }
