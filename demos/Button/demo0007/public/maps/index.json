@@ -2,30 +2,71 @@
   {
     "items": [
       {
-        "name": "BBBBBBbbb"
+        "margin": "18px 4px",
+        "className": "btn red",
+        "name": "Button"
       },
       {
-        "name": "BBBBBBbbb"
+        "className": "btn orange",
+        "name": "Button"
+      },
+      {
+        "margin": "",
+        "className": "btn yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn green",
+        "name": "Button"
+      },
+      {
+        "margin": "",
+        "className": "btn blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn purple",
+        "name": "Button"
       }
     ]
   },
   {
     "items": [
       {
-        "name": "CCCCCCCCCC"
+        "className": "btn red",
+        "name": "Button"
       },
       {
-        "name": "DDDDDDDDDD"
+        "className": "btn orange",
+        "name": "Button"
       }
     ]
   },
   {
     "items": [
       {
-        "name": "BEEEEEEb"
+        "className": "btn gradient red",
+        "name": "Button"
       },
       {
-        "name": "BBGGGGGbbb"
+        "className": "btn gradient orange",
+        "name": "Button"
+      },
+      {
+        "className": "btn gradient yellow",
+        "name": "Button"
+      },
+      {
+        "className": "btn gradient green",
+        "name": "Button"
+      },
+      {
+        "className": "btn gradient blue",
+        "name": "Button"
+      },
+      {
+        "className": "btn gradient purple",
+        "name": "Button"
       }
     ]
   }

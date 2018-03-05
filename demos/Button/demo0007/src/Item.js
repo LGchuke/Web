@@ -4,10 +4,30 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount() {
+    if (this.button.className.indexOf('gradient') !== -1) {
+      const btn = this.button;
+      btn.onmousemove = function (e) {
+        const x = e.pageX - btn.offsetLeft;
+        const y = e.pageY - btn.offsetTop;
+
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+      };
+    }
+  }
+
   render() {
-    const { name } = this.props.item;
+    let { name, className, margin } = this.props.item;
+    if (!className) {
+      className = 'btn blue';
+    }
+
     return (
-      <button className='btn'>{ name }</button>
+      <button ref={ button => { this.button = button; }} className={ className } style={{ margin }}>
+        <span>{ name }</span>
+      </button>
     );
   }
 }
@@ -21,9 +41,6 @@ class Item extends React.Component {
     const item = this.props.item;
     return (
       <div className='item'>
-        {/* <p>
-          <a className='btn btn-neon' href='#'>Features</a>
-        </p> */}
         <Button item={ item } />
       </div>
     );

@@ -22,7 +22,6 @@ class App extends React.Component {
     xhr.onload = () => {
       if (xhr.status >= 200 && xhr.status < 300) {
         const res = JSON.parse(xhr.response);
-        console.log(res);
         this.setState(() => ({ res }));
       }
     };

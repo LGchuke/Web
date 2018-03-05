@@ -4,8 +4,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const publicPath = '/';
 
-console.log('This is: ', __dirname);
-
 module.exports = [
   {
     devtool: 'eval',
@@ -41,7 +39,6 @@ module.exports = [
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, './public/index.html')
-        // template: './index.html'
       }),
       new webpack.DefinePlugin({
         'process.env': {

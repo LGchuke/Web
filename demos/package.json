@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "webpack --watch",
     "dev": "webpack-dev-server --hot",
-    "devl": "../../node_modules/.bin/webpack-dev-server --hot",
+    "devl": "webpack-dev-server --config /Users/Egoist/Sites/Web/demos/Button/demo0007/webpack.config.js --hot",
     "build": "webpack"
   },
   "keywords": [
