@@ -8,4 +8,4 @@ Different kinds of Background
 
 **List**
 
-* demo0001 -- ...
+* demo0001 -- Blur Bg Switch
