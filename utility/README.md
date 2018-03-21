@@ -8,7 +8,8 @@ Utilities/
 
 **List**
 
-* IconMaker -- make custom icons 未成品，原本是打算用来制作自定义规格 Icon，发现还是得先学精 SVG 再回来做这个
+* IconMaker -- make custom icons 未成品，想制作自定义 Icon，可前提是得先把 SVG 学精
   * just have built it's ui frame
-* Conversion -- handle my specific conversion requirements 用来处理进制等奇奇怪怪等转换需求
+* Conversion -- handle my specific conversion requirements 处理进制等奇奇怪怪等转换需求
   * RGB to #ffffff complete（no matter style）
+* Popover -- ...

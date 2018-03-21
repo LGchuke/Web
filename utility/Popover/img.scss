@@ -1,0 +1,52 @@
+body {
+  background-color: #fff;
+}
+
+$n: 6;
+$min-row-height: (800px - 2 * 20px) / 6;
+$c1-color: #66afe9;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat($n, 1fr);
+  // grid-auto-rows: minmax($min-row-height, auto);
+  grid-auto-rows: 189px;
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat($n, 1fr);
+    grid-column: 1 / 7;
+    height: 100%;
+
+    .item {
+      overflow: hidden;
+      // box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+  }
+}
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  // background-color: #343434;
+  background: radial-gradient(#999, #111);
+
+  .img {
+    position: absolute;
+    opacity: 0.55555;
+    width: inherit;
+    height: inherit;
+    background-position: center 0;
+    background-size: cover;
+    cursor: pointer;
+    transition: opacity .18s ease-in-out, transform .18s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+  }
+}
+
