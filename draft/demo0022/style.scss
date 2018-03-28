@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system-font, "Helvetica Neue", Tahoma, "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+.outer {
+  position: relative;
+  min-height: 760px;
+
+  .inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1220px;
+    min-height: 760px;
+  }
+}
+
+#past-lives {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#past-lives .live-abstract {
+  display: flex;
+  flex: 0 0 366px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 20px 40px;
+  width: 366px;
+  text-align: center;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.07);
+  // box-shadow: 0px 2px 6px rgba(22,22,22,.06), 0px 3px 8px rgba(39,44,49,.06);
+  transition: all .32s ease-in-out;
+
+  @media (max-width: 430px) {
+    flex: 0 0 90vw;
+  }
+
+  &:hover {
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+    // box-shadow: 0px 14px 38px rgba(39,44,49,.06), 0px 3px 8px rgba(39,44,49,.03);
+    transform: translateY(-6px);
+  }
+
+  // .la-img {
+  //   height: 366px;
+  //   background: url('') no-repeat center center;
+  //   background-size: cover;
+
+  // }
+
+  .la-title {
+    margin-top: 20px;
+    height: 16px;
+    line-height: 1;
+    color: #222222;
+    font-family: PingFangSC;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .la-price {
+    margin-top: 15px;
+    height: 14px;
+    line-height: 1;
+    color: #ff4e00;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .la-intro {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    height: 26px;
+    line-height: 26px;
+    color: #999999;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &.hidden {
+    opacity: 0;
+    margin-top: 0;
+    margin-bottom: 1px;
+    height: 0;
+  }
+
+  $color: #eee;
+  &.skeleton {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+
+    .la-img {
+      background-color: $color;
+      background-image: none !important;
+    }
+
+    .la-title {
+      width: 180px;
+      height: 20px;
+      background-color: $color;
+
+      &:nth-child(2) {
+        width: 160px;
+      }
+    }
+
+    .la-price {
+      width: 40px;
+      height: 20px;
+      background-color: $color;
+    }
+
+    .la-intro {
+      width: 280px;
+      height: 20px;
+      background-color: $color;
+    }
+  }
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+      background-position: -468px 0
+  }
+  100%{
+      background-position: 468px 0
+  }
+}
