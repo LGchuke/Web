@@ -1,7 +1,6 @@
 import React from 'react';
-{/* import Tween from 'Tween'; */}
+import Tween from './Tween';
 
-/* eslint global Tween */
 
 class Button extends React.Component {
   constructor(props) {
@@ -9,13 +8,16 @@ class Button extends React.Component {
   }
 
   componentDidMount() {
+    const { typeA, typeB } = this.props;
     let btn = this.btn;
-    btn.addEventListener('click', () => {
-      console.log('click');
-      let start = 0, during = 10;
+    const from = 1;
+    const to = 0.86;
+
+    btn.addEventListener('mousedown', () => {
+      let start = 0, during = 20;
       let _run = function() {
         start++;
-        let scale = Tween.Bounce.easeOut(start, 1, -0.14, during);
+        let scale = Tween[typeA][typeB](start, from, to - from, during);
         btn.style.transform = `scale(${scale})`;
         console.log(scale, btn.style.transform);
         if (start < during) requestAnimationFrame(_run);
@@ -23,17 +25,24 @@ class Button extends React.Component {
       _run();
     });
 
-    this.btn.addEventListener('keydown', () => {
-      console.log('keydown');
+    btn.addEventListener('mouseup', () => {
+      let start = 0, during = 20;
+      let _run = function() {
+        start++;
+        let scale = Tween[typeA][typeB](start, to, from - to, during);
+        btn.style.transform = `scale(${scale})`;
+        console.log(scale, btn.style.transform);
+        if (start < during) requestAnimationFrame(_run);
+      };
+      _run();
     });
   }
 
   render() {
-    {/* const { typeA, typeB } = this.props; */}
     const className = 'btn neon-1 default lg';
     const name = 'Button';
     return (
-      <button ref={(btn) => { this.btn = btn; }} className={ className } style={{ '--color': '#0ff' }}>
+      <button ref={(btn) => { this.btn = btn; }} className={ className } style={{ '--color': '#8af' }}>
         <span>{ name }</span>
       </button>
     );
@@ -46,9 +55,11 @@ class Item extends React.Component {
   }
 
   render() {
+    const { typeA, typeB } = this.props;
     return (
       <div className='item' style={{ '--color': '123' }}>
         <Button { ...this.props } />
+        <h3>{ typeA }, { typeB }</h3>
       </div>
     );
   }

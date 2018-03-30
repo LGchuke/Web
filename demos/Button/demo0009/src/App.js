@@ -14,13 +14,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    {/* this.loadMap(); */}
+    this.loadMap();
   }
 
   loadMap() {
     let xhr = new XMLHttpRequest();
     xhr.overrideMimeType('application/json');
-    xhr.open('GET', './assets/maps/index.json');
+    xhr.open('GET', './assets/map/btn-type.json');
     xhr.onload = () => {
       if (xhr.status >= 200 && xhr.status < 300) {
         const res = JSON.parse(xhr.response);
@@ -32,33 +32,30 @@ class App extends React.Component {
 
   render() {
 
-    {/* const res = this.state.res; */}
-    {/* let rows = []; */}
-    {/* if (res) { */}
-    {/*   const x = 6; */}
-    {/*   const count = res.length / x - 1; */}
+    const res = this.state.res;
+    let rows = [];
+    if (res) {
+      const x = 3;
+      const count = res.length / x - 1;
 
-    {/*   for (let i = 0; i < count; i++) { */}
-    {/*     let row = ( */}
-    {/*       <Row> */}
-    {/*         <Item hex={res[i * 6 + 0].hex} /> */}
-    {/*         <Item hex={res[i * 6 + 1].hex} /> */}
-    {/*         <Item hex={res[i * 6 + 2].hex} /> */}
-    {/*         <Item hex={res[i * 6 + 3].hex} /> */}
-    {/*         <Item hex={res[i * 6 + 4].hex} /> */}
-    {/*         <Item hex={res[i * 6 + 5].hex} /> */}
-    {/*       </Row> */}
-    {/*     ); */}
-    {/*     rows.push(row); */}
-    {/*   } */}
-    {/* } */}
+      for (let i = 0; i < count; i++) {
+        let row = (
+          <Row>
+            <Item typeA={ res[i * x + 0].typeA } typeB={ res[i * x + 0].typeB } />
+            <Item typeA={ res[i * x + 1].typeA } typeB={ res[i * x + 1].typeB } />
+            <Item typeA={ res[i * x + 2].typeA } typeB={ res[i * x + 2].typeB } />
+          </Row>
+        );
+        rows.push(row);
+      }
+    }
 
     return (
       <div id='neon-box' className='grid'>
-        {/* { rows } */}
-        <Row>
-          <Item typeA='bounce' typeB='0' />
-        </Row>
+        { rows }
+        {/* <Row> */}
+        {/*   <Item typeA='Bounce' typeB='easeInOut' /> */}
+        {/* </Row> */}
       </div>
     );
   }
