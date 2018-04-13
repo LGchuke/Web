@@ -12,6 +12,7 @@ Learn & practice about SVG
 * demo0003 -- AFX in SEE Conf
 * demo0004 -- ...I just like this one
 * demo0005 -- ...(for learning SVG)
+* demo0006 -- Custom SVG with JS
 
 
 
