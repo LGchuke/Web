@@ -23,3 +23,4 @@
 * demo0018 -- Inception Door(inspired by the glass door of the der Muslhaufen)
 * demo0022 -- Skeleton Screen Loading
 * demo0023 -- Rating
+* demo0024 -- 60 frame-per-second's animation demo
