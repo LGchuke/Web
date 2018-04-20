@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'slider';
+
+body {
+  background-color: #333;
+}
+
+.panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+}

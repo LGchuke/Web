@@ -4,6 +4,8 @@ let el = document.getElementById('el');
 
 
 let x = y = z = 0;
+const range = 50;
+const edge = 180;
 
 let setElStyle = () => {
   console.log(x, y, z);
@@ -11,15 +13,15 @@ let setElStyle = () => {
 };
 
 let handleAxisX = (ret) => {
-  x = (ret - 50) / 50.0 * 90;
+  x = (ret - range) / range * edge;
 };
 
 let handleAxisY = (ret) => {
-  y = (ret - 50) / 50.0 * 90;
+  y = (ret - range) / range * edge;
 };
 
 let handleAxisZ = (ret) => {
-  z = (ret - 50) / 50.0 * 90;
+  z = (ret - range) / range * edge;
 };
 
 [].map.call(sliders, (slider, index) => {
@@ -29,12 +31,12 @@ let handleAxisZ = (ret) => {
   let track = slider.querySelector('.slider-track');
 
   let handleMouseMove = (e) => {
-    let ret = parseInt((e.screenX - l) / w * 100);
+    let ret = parseInt((e.screenX - l) / w * range * 2);
     if (ret < 0) {
       ret = 0;
     }
-    if (ret > 100) {
-      ret = 100;
+    if (ret > range * 2) {
+      ret = range * 2;
     }
     handler.style.left = ret + '%';
     track.style.width = ret + '%';
