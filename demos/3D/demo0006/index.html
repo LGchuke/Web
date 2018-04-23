@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D demo0006 -- Rotate3d Cube2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <section class="ex">
+      <!-- <div id="el" class="transition-all" style="transform: rotate3d(1, 1, 1, 45deg);"> -->
+      <div id="el" class="transition-all" style="">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+          <div class="axis x">...</div>
+          <div class="axis y">...</div>
+          <div class="axis z">...</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="panel">
+    <div class="slider">
+      <div class="slider-track" style="visibility: visible; left: 0%; width: 50%;"></div>
+      <div class="slider-handle" style="left: 50%;"></div>
+      <div class="slider-mark"></div>
+    </div>
+    <div class="slider">
+      <div class="slider-track" style="visibility: visible; left: 0%; width: 50%;"></div>
+      <div class="slider-handle" style="left: 50%;"></div>
+      <div class="slider-mark"></div>
+    </div>
+    <div class="slider">
+      <div class="slider-track" style="visibility: visible; left: 0%; width: 50%;"></div>
+      <div class="slider-handle" style="left: 50%;"></div>
+      <div class="slider-mark"></div>
+    </div>
+  </div>
+  <section id="options">
+    <p id="show-buttons">
+      <button class="show-front">Show 1</button>
+      <button class="show-back">Show 2</button>
+      <button class="show-right">Show 3</button>
+      <button class="show-left">Show 4</button>
+      <button class="show-top">Show 5</button>
+      <button class="show-bottom">Show 6</button>
+    </p>
+    <p>
+      <button id="toggle-backface-visibility">Toggle Backface Visibility</button>
+    </p>
+  </section>
+
+  <script type="text/javascript" src="base.js"></script>
+
+</body>
+</html>
