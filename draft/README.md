@@ -24,3 +24,4 @@
 * demo0022 -- Skeleton Screen Loading
 * demo0023 -- Rating
 * demo0024 -- 60 frame-per-second's animation demo
+* demo0025 -- CSS is fun(http://simaq.github.io/cssfun/)
