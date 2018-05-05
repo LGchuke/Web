@@ -44,9 +44,17 @@ class Player {
     return this.media.currentTime = value;
   }
 
+  setTimeDelta(delta) {
+    return this.media.currentTime += delta;
+  }
+
   getProgress() {
     const { currentTime, duration } = this.media;
     return currentTime / duration;
+  }
+
+  changeMuted() {
+    return this.media.muted = !this.media.muted;
   }
 
   enterFullscreen() {
@@ -89,3 +97,99 @@ btnPlay.addEventListener('click', () => {
 btnPause.addEventListener('click', () => {
   player.pause();
 });
+
+
+
+// lib
+function htmlToElement(html) {
+  let template = document.createElement('template');
+  html = html.trim();
+  template.innerHTML = html;
+  return template.content.firstChild;
+}
+
+let messageWrapper = document.querySelector('.message span');
+
+let sendMessage = (text, type) => {
+  let el = htmlToElement(`
+    <div class='message-notice'>
+      <div class='message-notice-content'>
+        <div class='message-custom-content message-${type}'>
+          <i class='icon icon-check-circle'>O˚£¢∞§¶ß</i>
+          <span>This is a message of ${text}</span>
+        </div>
+      </div>
+    </div>
+  `);
+
+  messageWrapper.appendChild(el);
+
+  setTimeout(() => {
+    messageWrapper.removeChild(el);
+  }, 3000);
+};
+
+/**
+ * ...
+ */
+let flag = false;
+let flagCount = 0;
+
+document.addEventListener('keydown', e => {
+  // console.log(e.key);
+
+  if (e.key === 'Control') {
+    flagCount += 1;
+
+    if (flagCount === 2) {
+      flag = !flag;
+      flagCount = 0;
+      if (flag) {
+        sendMessage('ctrl up', 'success');
+      } else {
+        sendMessage('ctrl down', 'warning');
+      }
+    }
+  } else {
+    flagCount = 0;
+  }
+
+  if (flag) {
+    // console.log(flag);
+    switch (e.key) {
+      case 'a':
+        player.setTimeDelta(-0.1);
+        break;
+      case 's':
+        player.setTimeDelta(-0.1 * 10);
+        break;
+      case 'd':
+        player.setTimeDelta(-0.1 * 100);
+        break;
+      case 'f':
+        player.setTimeDelta(-0.1 * 1000);
+        break;
+      case 'h':
+        player.setTimeDelta(0.1 * 1000);
+        break;
+      case 'j':
+        player.setTimeDelta(0.1 * 100);
+        break;
+      case 'k':
+        player.setTimeDelta(0.1 * 10);
+        break;
+      case 'l':
+        player.setTimeDelta(0.1);
+        break;
+      case 'y':
+        player.play();
+        break;
+      case 'u':
+        player.pause();
+        break;
+      case 'i':
+        player.changeMuted();
+        break;
+    }
+  }
+})
