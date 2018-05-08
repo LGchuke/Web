@@ -12,5 +12,6 @@ Utilities/
   * just have built it's ui frame
 * Conversion -- handle my specific conversion requirements 处理进制等奇奇怪怪等转换需求
   * RGB to #ffffff complete（no matter style）
-* Popover -- ...
-* Slider -- ...
+* Popover -- the floating card popped by clicking or hovering
+* Slider -- a slider component for displaying current value and intervals in range
+* Message -- global notification, display global messages as feedback in response to user operations

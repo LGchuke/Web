@@ -16,7 +16,7 @@ let sendMessage = (text, type) => {
       <div class='message-notice-content'>
         <div class='message-custom-content message-${type}'>
           <i class='icon icon-check-circle'>O˚£¢∞§¶ß</i>
-          <span>This is a message of ${text}</span>
+          <span>key <code>${text}</code> has down${text}</span>
         </div>
       </div>
     </div>
@@ -24,16 +24,25 @@ let sendMessage = (text, type) => {
 
   messageWrapper.appendChild(el);
 
+  el.classList.add('move-up-enter', 'move-up-enter-active');
+
+
   setTimeout(() => {
-    messageWrapper.removeChild(el);
+    el.addEventListener('animationend', () => {
+      messageWrapper.removeChild(el);
+    });
+
+    // el.classList.remove('move-up-enter', 'move-up-enter-active');
+    // el.classList.add('move-up-enter', 'move-up-enter-active');
+    el.className = 'message-notice move-up-leave move-up-leave-active';
   }, 3000);
+
 };
 
 document.addEventListener('keydown', e => {
-  console.log(e.key);
-  if (e.key === 'Control' && e.key === 's') {
-    sendMessage('for test', 'success');
+  // console.log(e.key);
+  if (e.ctrlKey && e.key === 's') {
+    sendMessage('ctrl<code>dasdasd</code>', 'success');
+    sendMessage('ctrl', 'warning');
   }
-
-  // sendMessage('for test', 'warning');
 });

@@ -18,6 +18,18 @@
     position: relative;
   }
 
+  code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+    // font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-family: 'menlo';
+    // font-size: 85%;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
   .message-success {
     .icon {
       color: #52c41a;
@@ -38,6 +50,12 @@
 .message-notice {
   padding: 8px;
   text-align: center;
+
+  &.move-up-leave.move-up-leave-active {
+    animation-name: MessageMoveOut;
+    overflow: hidden;
+    animation-duration: .3s;
+  }
 }
 
 .message-notice-content {
