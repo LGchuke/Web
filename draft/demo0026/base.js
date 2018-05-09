@@ -116,7 +116,7 @@ let sendMessage = (text, type) => {
       <div class='message-notice-content'>
         <div class='message-custom-content message-${type}'>
           <i class='icon icon-check-circle'>O˚£¢∞§¶ß</i>
-          <span>This is a message of ${text}</span>
+          <span>${text}</span>
         </div>
       </div>
     </div>
@@ -124,10 +124,19 @@ let sendMessage = (text, type) => {
 
   messageWrapper.appendChild(el);
 
+  el.classList.add('move-up-enter', 'move-up-enter-active');
+
+
   setTimeout(() => {
-    messageWrapper.removeChild(el);
+    el.addEventListener('animationend', () => {
+      messageWrapper.removeChild(el);
+    });
+
+    el.className = 'message-notice move-up-leave move-up-leave-active';
   }, 3000);
+
 };
+////////
 
 /**
  * ...
@@ -145,9 +154,9 @@ document.addEventListener('keydown', e => {
       flag = !flag;
       flagCount = 0;
       if (flag) {
-        sendMessage('ctrl up', 'success');
+        sendMessage('<code>Ctrl</code> up', 'success');
       } else {
-        sendMessage('ctrl down', 'warning');
+        sendMessage('<code>Ctrl</code> off', 'warning');
       }
     }
   } else {
