@@ -8,7 +8,7 @@ const range = 50;
 const edge = 180;
 
 let setElStyle = () => {
-  console.log(x, y, z);
+  // console.log(x, y, z);
   el.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`;
 };
 
@@ -31,6 +31,7 @@ let handleAxisZ = (ret) => {
   let track = slider.querySelector('.slider-track');
 
   let handleMouseMove = (e) => {
+    e.preventDefault();
     let ret = parseInt((e.screenX - l) / w * range * 2);
     if (ret < 0) {
       ret = 0;
@@ -53,14 +54,24 @@ let handleAxisZ = (ret) => {
     setElStyle();
   };
 
-  // slider.addEventListener('mousedown', e => {
-  //   slider.addEventListener('mousemove', handleMouseMove, false);
+  let flag = true;
+  slider.addEventListener('mousedown', e => {
+    e.preventDefault();
+    if (flag) {
+      document.body.addEventListener('mousemove', handleMouseMove, false);
 
-  //   document.body.addEventListener('mouseup', e => {
-  //     slider.removeEventListener('mousemove', handleMouseMove, false);
-  //   });
-  // });
+      document.addEventListener('mouseup', e => {
+        e.preventDefault();
+        document.body.removeEventListener('mousemove', handleMouseMove, false);
+        flag = true;
+      });
+
+      flag = false;
+    }
+  });
+
   slider.addEventListener('click', e => {
+    e.preventDefault();
     handleMouseMove(e);
   });
 });
