@@ -1,0 +1,51 @@
+
+
+.loading-mod__loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 96px;
+  height: 96px;
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: 8px;
+
+  .loading-mod__bg2,
+  .loading-mod__bg {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    width: 48px;
+    height: 48px;
+    // background: url(//img.alicdn.com/tps/i3/T1uPOOFfVaXXbLNxnk-96-192.png) no-repeat 50%;
+    background: url(./spinner-bg.png) no-repeat 50%;
+    background-size: 48px;
+  }
+
+  .loading-mod__bg {
+    background-position: 0 0;
+  }
+
+  .loading-mod__bg2 {
+    background-position: 0 -48px;
+  }
+
+
+  &:hover .loading-mod__bg {
+    animation: loading-mod__spin 1s infinite linear;
+  }
+}
+
+
+
+@keyframes loading-mod__spin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(-359deg)
+  }
+}
