@@ -38,13 +38,13 @@ class Button extends React.Component {
   }
 
   render() {
-    const { typeB } = this.props;
+    const { color, borderColor, bgColor, fontColor } = this.props.obj;
 
     const className = 'btn lg flow';
     const name = 'Button';
 
     return (
-      <button ref={(btn) => { this.btn = btn; }} className={ className } style={{ '--color': typeB }}>
+      <button ref={(btn) => { this.btn = btn; }} className={ className } style={{ '--flowColor': color, '--borderColor': borderColor, '--bgColor': bgColor, '--fontColor': fontColor }}>
         <span>{ name }</span>
       </button>
     );
