@@ -1,0 +1,42 @@
+$flowHeight: 24px;
+$flowDelta: 1px;
+$flowDeltaD: $flowDelta * 2;
+
+.flow {
+  position: relative;
+  // padding: 30px;
+  // width:
+  height: $flowHeight;
+  line-height: $flowHeight;
+  color: var(--fontColor);
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px var(--flowColor);//#FFDD1B
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -$flowDelta;
+    left: -$flowDelta;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    filter: blur(12px);
+    transition: opacity 0.12s ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0.6;
+      background-image: linear-gradient(to left, transparent, var(--flowColor), transparent);
+      background-size: 200%;
+      animation: animateGlow 2s linear infinite;
+    }
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%; }
+  100% {
+    background-position: 200% 50%; } }
