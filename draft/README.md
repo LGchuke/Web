@@ -27,3 +27,4 @@
 * demo0025 -- CSS is fun(http://simaq.github.io/cssfun/)
 * demo0026 -- Simplest Player
 * demo0027 -- IAdB Popup Page
+* demo0028 -- Chrome Extension Playground
