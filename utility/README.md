@@ -12,7 +12,8 @@ Utilities/
   * just have built it's ui frame
 * Conversion -- handle my specific conversion requirements 处理进制等奇奇怪怪等转换需求
   * RGB to #ffffff complete（no matter style）
-* Modal -- the floating dialog popped by clicking or hovering
+* Modal -- Modal dialogs
 * Slider -- a slider component for displaying current value and intervals in range
 * Message -- global notification, display global messages as feedback in response to user operations
 * Spin -- Or loading. A spinner for displaying loading state of a page or a section.
+* Popover -- The floating card popped by clicking or hovering
