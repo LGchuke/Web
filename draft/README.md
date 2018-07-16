@@ -28,3 +28,4 @@
 * demo0026 -- Simplest Player
 * demo0027 -- IAdB Popup Page
 * demo0028 -- Chrome Extension Playground
+* demo0031 -- Horizontal
