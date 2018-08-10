@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+$cardRadius: 16px;
+
+.card {
+  position: absolute;
+  left: 50%;
+  margin: 0 auto;
+  // margin-top: 24px;
+  border-top-right-radius: $cardRadius;
+  border-bottom-right-radius: $cardRadius;
+  border-bottom-left-radius: $cardRadius;
+  width: 320px;
+  height: 162px;
+  background-color: #2dcaf9;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease-in-out;
+
+  .card-mark {
+    position: absolute;
+    top: -18px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 56px;
+    height: 24px;
+    line-height: 24px;
+    background: #2dcaf9; //#33a2f3;
+    text-align: center;
+
+    &:before {
+      content: '\e627';
+      color: #fff;
+      font-size: 16px;
+      font-family: anticon;
+      font-weight: bold;
+    }
+  }
+
+  .card-content {
+    margin: 6px;
+    border-radius: $cardRadius;
+    width: 308px;
+    height: 150px;
+
+    background-color: #fff;
+
+    span {
+      margin: 20px;
+      line-height: 40px;
+    }
+  }
+}
+
+.card-wrap {
+  position: relative;
+  margin-top: 40px;
+  perspective: 1050px;
+  // perspective: 2120px;
+  transform-style: preserve-3d;
+
+  .flipper.flip {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    width: 320px;
+    // width: 240px;
+    height: 480px;
+    // height: 360px;
+  }
+
+  /* flip speed goes here */
+  .flipper {
+    position: absolute;
+    left: 50%;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    // position: relative;
+  }
+
+  /* hide back of pane during swap */
+  .front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+  }
+
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(180deg);
+  }
+}
+
+body {
+  background-color: #000;
+}

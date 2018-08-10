@@ -11,4 +11,5 @@ Different kinds of card
 * demo0001 -- Todo 的那个啥
 * demo0002 -- ...
 * demo0003 -- Pick
+* demo0004 -- Heart Stone & shuffle
 
